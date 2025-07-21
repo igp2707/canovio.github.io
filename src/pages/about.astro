@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import arrow from '../assets/arrow-72.png'
+---
+
+<Layout title="Tentang Kami | CANOVIO Glasstone" page="about">
+    <section class="w-screen h-auto px-4 pt-24 bg-amber-50">
+        <div class="container mx-auto h-[calc(420px)] bg-[#342015] bg-[url('/images/bg-2.jpg')] bg-cover bg-center bg-blend-soft-light rounded-4xl">
+            <div class="flex flex-col h-full justify-end lg:w-1/3 w-full ">
+                <h2 class="text-3xl lg:text-5xl font-nunito uppercase bg-amber-50 inline w-fit py-4 pl-4 pr-12 rounded-tr-4xl">Tentang</h2>
+                <h2 class="text-3xl lg:text-5xl font-black font-nunito uppercase bg-amber-50 inline w-fit lg:w-full p-4 lg:pr-0 rounded-tr-4xl">Canovio Glasstone</h2>
+            </div>
+        </div>
+    </section>
+    <section class="w-screen h-auto px-8 py-8 bg-amber-50">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="w-full lg:w-1/3 h-fit py-2 px-0 lg:px-8 overflow-hidden flex flex-row gap-4 items-center">
+                    <h2 class="text-2xl lg:text-3xl font-bold font-nunito">Cerita Kami</h2>
+                    <img src={arrow.src} alt="panah-1" class="rotate-90 w-8 h-8 lg:w-12 lg:h-12" />
+                </div>
+                <div class="w-full lg:w-2/3 h-auto py-2 pr-8 overflow-hidden">
+                    <div class="text-base lg:text-xl font-comfortaa text-justify font-semibold">
+                        <p class="mb-4">Canovio Glasstone adalah perusahaan konstruksi yang didirikan pada tahun 2020. Kami berkomitmen untuk memberikan layanan konstruksi berkualitas tinggi dengan harga terjangkau.</p>
+                        <p>Kami memiliki tim profesional yang berpengalaman dalam berbagai proyek konstruksi, mulai dari rumah tinggal hingga bangunan komersial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-screen h-auto px-4 py-6 lg:py-24 bg-amber-50">
+        <div class="container mx-auto bg-[#342015] text-amber-50 ronded-4xl p-8 rounded-4xl">
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-nunito font-bold mb-4 lg:mb-8"> Visi Kami </h2>
+                    <ul>
+                        <li>
+                            <p class="text-base font-comfortaa my-2">Menjadi perusahaan konstruksi terkemuka yang dikenal karena kualitas, inovasi, dan kepuasan pelanggan.</p>
+                        </li>
+                        <li>
+                            <p class="text-base font-comfortaa my-2">Menjadi pelopor dalam industri konstruksi dengan menghadirkan solusi inovatif, berkualitas, dan berkelanjutan untuk setiap proyek.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-nunito font-bold mb-4 lg:mb-8"> Misi Kami </h2>
+                    <p class="text-base font-comfortaa my-2">Memberikan layanan konstruksi yang berkualitas tinggi, inovatif, dan terjangkau untuk memenuhi kebutuhan klien kami.</p>
+                    <p class="text-base font-comfortaa my-2">Membangun hubungan jangka panjang dengan pelanggan melalui kepercayaan, integritas, dan pelayanan terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-screen h-auto px-4 pb-12 bg-amber-50">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:justify-around gap-4 lg:gap-8">
+                <div class="flex flex-col w-fit h-32 items-center justify-center gap-4">
+                    <h2 class="text-4xl font-nunito font-black">10+</h2>
+                    <h4 class="text-2xl font-comfortaa">Tahun Pengalaman</h2>
+                </div>
+                <div class="flex flex-col w-fit h-32 items-center justify-center gap-4">
+                    <h2 class="text-4xl font-nunito font-black">20+</h2>
+                    <h4 class="text-2xl font-comfortaa">Proyek Terselesaikan</h2>
+                </div>
+                <div class="flex flex-col w-fit h-32 items-center justify-center gap-4">
+                    <h2 class="text-4xl font-nunito font-black">10+</h2>
+                    <h4 class="text-2xl font-comfortaa">Happy Clients</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="w-screen h-auto px-4 py-12 bg-amber-50">
+        <div class="container mx-auto">
+            
+        </div>
+    </section> -->
+</Layout>

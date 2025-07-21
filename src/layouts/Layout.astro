@@ -1,22 +1,252 @@
+---
+const { title, page } = Astro.props;
+import "../styles/global.css";
+import Welcome from '../components/Welcome.astro'
+
+import wa from '../assets/wa-white.png'
+import arrow from '../assets/arrow-72.png'
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth w-screen overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+		<meta name="description" content="Jasa konstruksi terpercaya di Indonesia terutama untuk kawasan Tanggerang Selatan. Bangun rumah, ruko, dan lainnya bersama PT Bangun Jaya." />
+		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded&icon_names=home,info,work,article,call" rel="stylesheet" />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+		<title>{title}</title>
+	</head>
+	<body class="font-sans text-gray-800 overflow-x-hidden w-screen relative" id="top">
+		<header class="bg-transparent text-black py-4 absolute top-0 left-0 w-screen z-50">
+			<div class="container mx-auto flex justify-between items-center px-4">
+				<h1 class="text-xl font-bold font-nunito text-[#342015]">CANOVIO</h1>
+				<nav class="space-x-4 hidden lg:flex">
+					<a 
+					href="/" 
+					class="overflow-hidden 
+						relative 
+						inline-block
+						before:content-['Beranda'] 
+						before:block
+						before:w-full 
+						before:h-auto 
+						before:font-comfortaa
+						before:absolute 
+						before:top-full
+						before:left-0
+						before:transition-all
+						before:duration-500
+						hover:before:top-0
+						group"
+					> <div class="transition duration-500 group-hover:-translate-y-full font-comfortaa">
+						<span class={page === 'home' ? 'font-black' : ''}>Beranda</span>
+					</div>
+					</a>
+					<a 
+					href="/about" 
+					class="overflow-hidden 
+						relative 
+						inline-block
+						before:content-['Tentang_Kami'] 
+						before:block
+						before:w-full 
+						before:h-auto 
+						before:font-comfortaa
+						before:absolute 
+						before:top-full
+						before:left-0
+						before:transition-all
+						before:duration-500
+						hover:before:top-0
+						group"
+					> <div class="transition duration-500 group-hover:-translate-y-full font-comfortaa">
+						<span class={page === 'about' ? 'font-black' : ''}>Tentang Kami</span>
+					</div>
+					</a>
+					<a 
+					href={'/category/aluminium'} 
+					class="overflow-hidden 
+						relative 
+						inline-block
+						before:content-['Pekerjaan_Kami'] 
+						before:block
+						before:w-full 
+						before:h-auto 
+						before:font-comfortaa
+						before:absolute 
+						before:top-full
+						before:left-0
+						before:transition-all
+						before:duration-500
+						hover:before:top-0
+						group"
+					> 
+					<div class="transition duration-500 group-hover:-translate-y-full font-comfortaa">
+						<span class={page === 'category' ? 'font-black' : ''}>Pekerjaan Kami</span>
+					</div>
+					</a>
+					<a 
+					href={'/articles'}
+					class="overflow-hidden 
+						relative 
+						inline-block
+						before:content-['Artikel'] 
+						before:block
+						before:w-full 
+						before:h-auto 
+						before:font-comfortaa
+						before:absolute 
+						before:top-full
+						before:left-0
+						before:transition-all
+						before:duration-500
+						hover:before:top-0
+						group"
+					> 
+					<div class="transition duration-500 group-hover:-translate-y-full font-comfortaa">
+						<span class={page === 'blog' ? 'font-black' : ''}>
+							Artikel
+						</span>
+					</div>
+					</a>
+				</nav>
+				<a href={"/contact"} class="inline-block bg-[#342015] text-white border-2 border-transparent px-6 py-2.5 rounded-2xl hover:bg-[#745748] transition-colors font-comfortaa text-sm">Kontak Kami</a>
+			</div>
+		</header>
+
+		<div id="bottomMenu" class="lg:hidden fixed bottom-0 left-0 bg-amber-50 flex flex-row justify-around items-center w-screen h-18 z-10">
+			<a href="/" class="w-fit text-center">
+				<div class={page === 'home' ? 'bg-[#745748] text-white px-4 rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+					<span class="material-symbols-rounded">
+						home
+					</span>
+				</div>
+				<span class={page === 'home' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Beranda</span>
+			</a>
+			<a href={"/about"} class="w-fit text-center">
+				<div class={page === 'about' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+					<span class="material-symbols-rounded">
+						info
+					</span>
+				</div>
+				<span class={page === 'about' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Tentang Kami</span>
+			</a>
+			<a href={"/category/aluminium"} class="w-fit text-center">
+				<div class={page === 'category' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+					<span class="material-symbols-rounded">
+						work
+					</span>
+				</div>
+				<span class={page === 'category' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Pekerjaan Kami</span>
+			</a>
+			<a href={"/articles"} class="w-fit text-center">
+				<div class={page === 'blog' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+					<span class="material-symbols-rounded">
+						article
+					</span>
+				</div>
+				<span class={page === 'blog' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Artikel</span>
+			</a>
+		</div>
+
+		<!-- <Welcome /> -->
+
+		<main>
+			<slot />
+		</main>
+
+		<div class="fixed bottom-24 lg:bottom-4 right-4 flex flex-col gap-4">
+			<div class="overflow-hidden">
+				<a href="#top" id="go-top" class="flex flex-row justify-center items-center w-12 h-12 bg-gray-200 rounded-2xl hover:bg-gray-150 transition-all duration-300 translate-y-full">
+					<img src={arrow.src} alt="arrow" class="w-6 h-6 -rotate-45" />
+				</a>
+			</div>
+			<a href="#!" class="flex flex-row justify-center items-center w-12 h-12 bg-green-500 rounded-2xl hover:bg-green-400 transition-all">
+				<img src={wa.src} alt="wa" class="w-6 h-6" />
+			</a>
+		</div>
+
+		<footer class="bg-[#342015] text-white text-center py-12 w-screen pb-32 lg:pb-0">
+			<div class="container mx-auto px-4 lg:px-0">
+				<div class="flex lg:flex-row flex-col">
+					<div class="lg:w-1/4 w-full pr-12 mb-4 lg:mb-0">
+						<a href="/" class="flex items-center">
+							<img src="/images/icon-light.png" alt="logo" class="w-16 h-16 mr-2" />
+							<div class="inline-block text-left">
+								<h1 class="text-2xl font-bold font-nunito">CANOVIO</h1>
+								<h1 class="text-base font-semibold tracking-widest">Glasstone</h1>
+							</div>
+						</a>
+						<p class="text-sm mt-2 font-comfortaa text-justify">Canovio Glasstone merupakan jasa konstruksi terpercaya dengan memberikan kualitas terbaik dengan harga terjangkau.</p>
+					</div>
+					<div class="lg:w-3/4 w-full">
+						<div class="flex lg:flex-row flex-col lg:justify-between gap-4">
+							<div class="text-left">
+								<h2 class="text-xl font-comfortaa font-bold mb-4">Perusahaan</h2>
+								<ul class="text-sm font-comfortaa space-y-2">
+									<li><a href={"/about"}>Tentang Kami</a></li>
+									<li><a href={"/category/aluminium"}>Pekerjaan Kami</a></li>
+									<li><a href={"/article"}>Artikel</a></li>
+								</ul>
+							</div>
+							<div class="text-left">
+								<h2 class="text-xl font-comfortaa font-bold mb-4">Kategori Glass</h2>
+								<ul class="text-sm font-comfortaa space-y-2">
+									<li><a href="/category/aluminium">Instalasi Aluminium</a></li>
+									<li><a href="/category/kanopi">Instalasi Kanopi</a></li>
+									<li><a href="/category/railing">Instalasi Kaca Railing</a></li>
+									<li><a href="/category/cermin">Instalasi Cermin</a></li>
+									<li><a href="/category/kaca">Instalasi Kaca Kamar Mandi</a></li>
+									<li><a href="/category/pintu">Instalasi Pintu Frameless</a></li>
+									<li><a href="/category/acp">Instalasi Curtain Wall & ACP</a></li>
+								</ul>
+							</div>
+							<div class="text-left">
+								<h2 class="text-xl font-comfortaa font-bold mb-4">Kategori Stone</h2>
+								<ul class="text-sm font-comfortaa space-y-2">
+									<li><a href="/category/table">Instalasi Top Table</a></li>
+									<li><a href="/category/dinding">Instalasi Dinding</a></li>
+									<li><a href="/category/lantai">Instalasi Lantai</a></li>
+								</ul>
+							</div>
+							<div class="text-left">
+								<h2 class="text-lg font-bold font-comfortaa mb-4">Kontak Kami</h2>
+								<ul class="text-sm font-comfortaa space-y-2">
+									<li>Email: <a href="mailto:example@mail.com">contoh@email.com</a>
+									<li>Telepon: <a href="tel:+62123456789">+62 123 456 789</a></li>
+									<li>Alamat: Jl. Contoh No. 123, Kota, Provinsi</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	<script>
+		import 'aos/dist/aos.css';
+		import AOS from 'aos';
+		AOS.init({
+			'once': true,
+		});
+
+		window.addEventListener('scroll', () => {
+			const header = document.querySelector('header');
+			const top = document.querySelector('#go-top');
+			if (!header) return;
+			if (window.scrollY > 50) {
+				header.classList.add('bg-white', 'shadow-md', 'fixed', 'top-0', 'left-0');
+				header.classList.remove('absolute');
+				top?.classList.remove('translate-y-full');
+			} else {
+				header.classList.remove('bg-white', 'shadow-md', 'fixed', 'top-0', 'left-0');
+				header.classList.add('absolute');
+				top?.classList.add('translate-y-full');
+			}
+		});
+	</script>
+</html>

@@ -1,0 +1,44 @@
+---
+import { LightGallery } from 'astro-lightgallery'
+
+const { work } = Astro.props
+
+---
+
+<section class="w-full h-auto lg:px-4 px-0 bg-amber-50">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-nunito font-black">
+            { work.title }
+        </h2>
+        <p class="text-base text-gray-600 font-comfortaa mt-4 text-justify">
+            { work.desc }
+        </p>
+        { work.images.length > 0 ? (
+            <>
+            <h3 class="text-2xl font-nunito mt-8">
+                Galeri Pekerjaan
+            </h3>
+            <p class="text-sm italic text-gray-600 font-comfortaa mt-2 text-justify">
+                Klik gambar untuk melihat lebih jelas.
+            </p>
+            <div class="w-full h-auto mt-4">
+                <LightGallery
+                    layout={{
+                        imgs: work.images
+                    }}
+                    options={{
+                        thumbnail: true
+                    }}
+                />
+            </div>
+            </>
+        ) : (
+            <>
+            <h3 class="text-2xl font-nunito mt-8 mb-4">
+                Galeri Pekerjaan
+            </h3>
+            <p class="text-sm font-comfortaa">Belum terdapat gambar untuk kategori pekerjaan ini.</p>
+            </>
+        ) }
+    </div>
+</section>

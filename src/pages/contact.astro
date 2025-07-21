@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import email from '../assets/email-white.png'
+import wa from '../assets/wa-white.png'
+import ig from '../assets/ig-white.png'
+import tiktok from '../assets/tiktok-white.png'
+import yt from '../assets/yt-white.png'
+---
+
+<Layout title="Kontak Kami | CANOVIO Glasstone" page="contact">
+    <section class="w-screen h-auto px-4 pt-24 pb-12 lg:py-24 bg-amber-50">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+                <div class="w-full h-fit bg-white p-6 py-8 rounded-4xl">
+                    <span class="text-base font-comfortaa text-[#342015] font-bold">
+                        Untuk pembahasan lebih lanjut
+                    </span>
+                    <h2 class="text-3xl font-bold font-nunito my-4">
+                        Tidak perlu ragu untuk menghubungi Kami..
+                    </h2>
+                    <form 
+                        action="https://formspree.io/f/yourFormID" 
+                        method="POST" 
+                        class="space-y-4"
+                    >
+                        <div>
+                        <label for="name" class="block font-medium">Nama Lengkap <span class="text-amber-800">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full border border-white bg-gray-100 rounded-xl px-4 py-3 mt-1" />
+                        </div>
+
+                        <div class="flex flex-row gap-4 justify-between">
+                            <div class="w-full">
+                            <label for="email" class="block font-medium">Email <span class="text-amber-800">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com" required class="w-full border border-white bg-gray-100 rounded-xl px-4 py-3 mt-1" />
+                            </div>
+                            <div class="w-full">
+                            <label for="telepon" class="block font-medium">No. Telp/WA <span class="text-amber-800">*</span></label>
+                            <input type="tel" id="telepon" name="telepon" placeholder="(+62) 812 3456 7890" required class="w-full border border-white bg-gray-100 rounded-xl px-4 py-3 mt-1" />
+                            </div>
+                        </div>
+
+                        <div>
+                        <label for="message" class="block font-medium">Pesan</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tuliskan sesuatu yang ingin Anda diskusikan.." required class="w-full border border-white bg-gray-100 rounded-xl px-4 py-3 mt-1"></textarea>
+                        </div>
+                        <div class="w-full text-center">
+                            <button 
+                            type="submit"
+                            class="bg-[#342015] text-white px-6 py-3 rounded-4xl hover:bg-[#745748] transition w-fit"
+                            disabled
+                            >
+                            Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full lg:h-[calc(420px)] h-fit">
+                    <div class="hidden w-full h-1/2 overflow-hidden rounded-4xl lg:flex justify-center items-center">
+                        <img src="/images/bg-3.jpg" alt="bg-3" class="w-full h-auto">
+                    </div>
+                    <div class="w-full h-auto p-6 rounded-4xl bg-[#342015] mt-4 text-amber-50">
+                        <h4 class="text-xl font-medium font-nunito">
+                            Kontak Kami
+                        </h4>
+                        <ul class="list-none mt-4 space-y-3">
+                            <li>
+                                <a href="#!" class="flex flex-row items-center bg-[#745748] rounded-3xl p-3 hover:bg-[#9b7866]">
+                                    <div class="w-12 h-12 p-2 bg-[#9b7866] rounded-full mr-4">
+                                        <img src={email.src} alt="email-icon" class="w-full h-auto">
+                                    </div>
+                                    <span class="text-base font-comfortaa font-bold">contoh@email.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="flex flex-row items-center bg-[#745748] rounded-3xl p-3 hover:bg-[#9b7866]">
+                                    <div class="w-12 h-12 p-2 bg-[#9b7866] rounded-full mr-4">
+                                        <img src={wa.src} alt="wa-icon" class="w-full h-auto">
+                                    </div>
+                                    <span class="text-base font-comfortaa font-bold">(+62) 812 3456 7890</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <h4 class="text-lg font-medium font-nunito mt-4 text-center">
+                            atau Anda bisa mengunjungi media sosial Kami
+                        </h4>
+                        <div class="flex flex-row justify-center gap-4 items-center mt-4">
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                                <img src={ig.src} alt="wa-icon" class="w-full h-auto">
+                            </a>
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                                <img src={tiktok.src} alt="wa-icon" class="w-full h-auto">
+                            </a>
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                                <img src={yt.src} alt="wa-icon" class="w-full h-auto">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

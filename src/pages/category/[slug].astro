@@ -1,0 +1,347 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import type { GetStaticPaths } from "astro";
+export const getStaticPaths = (() => {
+    return [
+        { 
+            params: { slug: 'aluminium' },
+            props: {
+                category : {
+                    title: 'Aluminium',
+                    desc: 'Instalasi aluminium merupakan salah satu pekerjaan konstruksi yang penting, terutama untuk pembuatan jendela dan pintu. Material aluminium dipilih karena memiliki sifat ringan, tahan karat, dan mudah dibentuk sesuai kebutuhan desain. Proses instalasi meliputi pengukuran, pemotongan, perakitan, hingga pemasangan rangka aluminium pada bangunan, sehingga menghasilkan tampilan yang modern, kokoh, dan tahan lama.',
+                    images: [
+                        { src: '/images/category/aluminium/1.jpeg' },
+                        { src: '/images/category/aluminium/2.jpeg' },
+                        { src: '/images/category/aluminium/3.jpeg' },
+                        { src: '/images/category/aluminium/4.jpeg' },
+                        { src: '/images/category/aluminium/5.jpeg' },
+                        { src: '/images/category/aluminium/6.jpeg' },
+                        { src: '/images/category/aluminium/7.jpeg' },
+                        { src: '/images/category/aluminium/8.jpeg' },
+                        { src: '/images/category/aluminium/9.jpeg' },
+                        { src: '/images/category/aluminium/11.jpeg' },
+                        { src: '/images/category/aluminium/12.jpeg' },
+                        { src: '/images/category/aluminium/13.jpeg' },
+                        { src: '/images/category/aluminium/14.jpeg' },
+                        { src: '/images/category/aluminium/15.jpeg' },
+                        { src: '/images/category/aluminium/16.jpeg' },
+                        { src: '/images/category/aluminium/17.jpeg' },
+                        { src: '/images/category/aluminium/18.jpeg' },
+                        { src: '/images/category/aluminium/19.jpeg' },
+                        { src: '/images/category/aluminium/20.jpeg' },
+                        { src: '/images/category/aluminium/21.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'kanopi' },
+            props: {
+                category : {
+                    title: 'Kanopi',
+                    desc: 'Kami melayani pemasangan berbagai jenis kanopi kaca seperti kanopi kaca tempered, kanopi kaca sliding tempered, dan kanopi kaca laminate tempered. Kanopi kaca memberikan tampilan modern dan elegan pada bangunan, sekaligus melindungi area dari panas dan hujan. Proses instalasi dilakukan secara profesional dengan memperhatikan kekuatan struktur, keamanan, dan estetika, sehingga hasil akhir kokoh, tahan lama, dan sesuai dengan kebutuhan Anda.',
+                    images: [
+                        { src: '/images/category/kanopi/1.jpeg' },
+                        { src: '/images/category/kanopi/2.jpeg' },
+                        { src: '/images/category/kanopi/3.jpeg' },
+                        { src: '/images/category/kanopi/4.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'railing' },
+            props: {
+                category : {
+                    title: 'Railing',
+                    desc: 'Kami melayani pemasangan railing berkualitas, baik tipe tempered frameless yang memberikan kesan modern dan minimalis, maupun railing dengan handrail untuk keamanan dan kenyamanan ekstra. Proses instalasi dilakukan secara profesional, memastikan setiap detail terpasang dengan presisi sesuai standar keamanan, sehingga menghasilkan railing yang kokoh, estetis, dan tahan lama untuk berbagai kebutuhan bangunan Anda.',
+                    images: [
+                        { src: '/images/category/railing/2.jpeg' },
+                        { src: '/images/category/railing/3.jpeg' },
+                        { src: '/images/category/railing/4.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'cermin' },
+            props: {
+                category : {
+                    title: 'Cermin',
+                    desc: 'Kami melayani pemasangan berbagai jenis cermin seperti wall mirror, cermin bevel, cermin wastafel, serta cermin custom sesuai kebutuhan Anda. Proses instalasi dilakukan secara profesional untuk memastikan hasil yang rapi, aman, dan memperindah ruangan. Dengan pilihan desain dan ukuran yang fleksibel, kami siap membantu mewujudkan tampilan interior yang elegan dan fungsional menggunakan cermin berkualitas.',
+                    images: []
+                }
+            }
+        },
+        { 
+            params: { slug: 'kaca' },
+            props: {
+                category : {
+                    title: 'Kaca Kamar Mandi',
+                    desc: 'Kami melayani pemasangan kaca untuk kamar mandi, baik sebagai sekat maupun pintu dengan model swing atau sliding. Instalasi kaca kamar mandi memberikan tampilan yang modern dan elegan, sekaligus menjaga privasi dan memaksimalkan pencahayaan. Dengan material kaca berkualitas dan teknik pemasangan yang profesional, kami memastikan hasil akhir yang rapi, aman, dan tahan lama sesuai kebutuhan desain ruangan Anda.',
+                    images: [
+                        { src: '/images/category/kamar-mandi/1.jpeg' },
+                        { src: '/images/category/kamar-mandi/2.jpeg' },
+                        { src: '/images/category/kamar-mandi/3.jpeg' },
+                        { src: '/images/category/kamar-mandi/4.jpeg' },
+                        { src: '/images/category/kamar-mandi/5.jpeg' },
+                        { src: '/images/category/kamar-mandi/6.jpeg' },
+                        { src: '/images/category/kamar-mandi/7.jpeg' },
+                        { src: '/images/category/kamar-mandi/8.jpeg' },
+                        { src: '/images/category/kamar-mandi/9.jpeg' },
+                        { src: '/images/category/kamar-mandi/10.jpeg' },
+                        { src: '/images/category/kamar-mandi/11.jpeg' },
+                        { src: '/images/category/kamar-mandi/12.jpeg' },
+                        { src: '/images/category/kamar-mandi/13.jpeg' },
+                        { src: '/images/category/kamar-mandi/14.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'pintu' },
+            props: {
+                category : {
+                    title: 'Pintu Frameless',
+                    desc: 'Kami melayani pemasangan pintu frameless dengan berbagai tipe seperti floorhinge, sliding, maupun folding. Pintu frameless memberikan tampilan modern dan elegan tanpa bingkai, sehingga ruangan terlihat lebih luas dan minimalis. Instalasi dilakukan secara profesional dengan memperhatikan presisi dan keamanan, baik untuk pintu kaca yang digantung, digeser, maupun dilipat sesuai kebutuhan desain interior Anda.',
+                    images: [
+                        { src: '/images/category/pintu-frameless/1.jpeg' },
+                        { src: '/images/category/pintu-frameless/2.jpeg' },
+                        { src: '/images/category/pintu-frameless/3.jpeg' },
+                        { src: '/images/category/pintu-frameless/4.jpeg' },
+                        { src: '/images/category/pintu-frameless/5.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'acp' },
+            props: {
+                category : {
+                    title: 'Curtain Wall & ACP',
+                    desc: 'Pekerjaan instalasi curtain wall dan ACP melibatkan pemasangan panel aluminium composite pada fasad bangunan untuk menciptakan tampilan modern, tahan lama, dan efisien. Proses ini membutuhkan ketelitian dalam pengukuran, pemotongan, serta pemasangan rangka dan panel agar hasil akhir rapi, kuat, dan sesuai desain arsitektur. Selain meningkatkan estetika, curtain wall dan ACP juga memberikan perlindungan terhadap cuaca serta meningkatkan efisiensi energi bangunan.',
+                    images: [
+                        { src: '/images/category/acp/1.jpeg' },
+                        { src: '/images/category/acp/2.jpeg' },
+                        { src: '/images/category/acp/3.jpeg' },
+                        { src: '/images/category/acp/4.jpeg' },
+                        { src: '/images/category/acp/5.jpeg' },
+                        { src: '/images/category/acp/6.jpeg' },
+                        { src: '/images/category/acp/7.jpeg' },
+                        { src: '/images/category/acp/8.jpeg' },
+                        { src: '/images/category/acp/9.jpeg' },
+                        { src: '/images/category/acp/10.jpeg' },
+                        { src: '/images/category/acp/11.jpeg' },
+                        { src: '/images/category/acp/12.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'table' },
+            props: {
+                category : {
+                    title: 'Top Table Kitchen',
+                    desc: 'Pekerjaan instalasi batu untuk top-table pada dapur dilakukan dengan teliti untuk memastikan permukaan meja dapur kokoh, rata, dan tahan lama. Proses ini meliputi pemotongan batu sesuai ukuran desain, pemasangan dengan perekat khusus, serta finishing pada bagian tepi agar tampak rapi dan estetis. Material batu yang digunakan memberikan tampilan elegan sekaligus memudahkan perawatan, sehingga dapur menjadi lebih fungsional dan menarik.',
+                    images: [
+                        { src: '/images/category/top-table/1.jpeg' },
+                        { src: '/images/category/top-table/2.jpeg' },
+                        { src: '/images/category/top-table/3.jpeg' },
+                        { src: '/images/category/top-table/4.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'dinding' },
+            props: {
+                category : {
+                    title: 'Dinding',
+                    desc: 'Pekerjaan instalasi batu untuk dinding merupakan proses pemasangan material batu alam atau buatan pada permukaan dinding, yang bertujuan untuk memberikan tampilan estetis sekaligus meningkatkan kekuatan struktur. Pada ruang keluarga, pemasangan batu dinding sering digunakan untuk menciptakan nuansa hangat, alami, dan elegan, serta menjadi focal point yang memperindah ruangan. Proses ini meliputi persiapan permukaan, pemilihan jenis batu yang sesuai, pemasangan dengan teknik yang tepat, dan finishing agar hasil akhir tampak rapi dan tahan lama.',
+                    images: [
+                        { src: '/images/category/dinding/1.jpeg' },
+                        { src: '/images/category/dinding/2.jpeg' },
+                        { src: '/images/category/dinding/3.jpeg' },
+                        { src: '/images/category/dinding/4.jpeg' },
+                        { src: '/images/category/dinding/5.jpeg' },
+                        { src: '/images/category/dinding/6.jpeg' },
+                        { src: '/images/category/dinding/7.jpeg' },
+                        { src: '/images/category/dinding/8.jpeg' },
+                        { src: '/images/category/dinding/9.jpeg' },
+                        { src: '/images/category/dinding/10.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
+            params: { slug: 'lantai' },
+            props: {
+                category : {
+                    title: 'Lantai',
+                    desc: 'Pekerjaan instalasi batu untuk lantai ruangan merupakan proses pemasangan material batu alam atau buatan pada permukaan lantai agar tampak rapi, kuat, dan tahan lama. Proses ini meliputi persiapan permukaan, pemilihan jenis batu yang sesuai, pemotongan, penataan pola, serta pemasangan menggunakan perekat khusus. Dengan teknik yang tepat, lantai batu dapat memberikan kesan estetis sekaligus meningkatkan nilai fungsi dan keindahan ruangan.',
+                    images: [
+                        { src: '/images/category/lantai/1.jpeg' },
+                        { src: '/images/category/lantai/2.jpeg' },
+                        { src: '/images/category/lantai/3.jpeg' },
+                        { src: '/images/category/lantai/4.jpeg' },
+                        { src: '/images/category/lantai/5.jpeg' },
+                        { src: '/images/category/lantai/6.jpeg' },
+                        { src: '/images/category/lantai/7.jpeg' },
+                        { src: '/images/category/lantai/8.jpeg' },
+                        { src: '/images/category/lantai/9.jpeg' },
+                        { src: '/images/category/lantai/10.jpeg' },
+                        { src: '/images/category/lantai/11.jpeg' },
+                        { src: '/images/category/lantai/12.jpeg' },
+                        { src: '/images/category/lantai/13.jpeg' },
+                    ]
+                }
+            }
+        },
+    ];
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params
+const { category } = Astro.props
+
+import WorksCategory from '../../components/WorksCategory.astro';
+
+import wa from '../../assets/wa-white.png'
+---
+
+<Layout title={ slug ? category.title+" | CANOVIO Glasstone" : "Kategori Tidak Ditemukan | CANOVIO Glasstone"} page="category">
+    <section class="w-screen h-auto px-4 pt-18 lg:pt-24 bg-amber-50">
+        <div class="container mx-auto flex lg:flex-row flex-col pb-12 relative">
+            <div id="category-list" class="lg:w-1/4 w-full h-full pl-4 lg:pl-0 pt-4 lg:pt-0 lg:z-0 z-50 lg:relative fixed bg-amber-50 transition-all duration-500 lg:left-0 -left-full">
+                <div class="lg:hidden block mb-4">
+                    <a href="#!" class="category-toggle font-nunito font-black flex items-center">
+                        <span class="material-symbols-rounded mr-2">
+                            close
+                        </span>
+                        Tutup
+                    </a>
+                </div>
+                <h2 class="text-2xl font-nunito">Kategori <i class="font-bold">Glass</i></h2>
+                <ul class="mt-4 list-none">
+                    <li>
+                        <a href={"/category/aluminium"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'aluminium' ? "font-black text-xl" : ""}>Aluminium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/kanopi"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'kanopi' ? "font-black text-xl" : ""}>
+                                Kanopi
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/railing"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'railing' ? "font-black text-xl" : ""}>
+                                Railing
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/cermin"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'cermin' ? "font-black text-xl" : ""}>
+                                Cermin
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/kaca"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'kaca' ? "font-black text-xl" : ""}>
+                                Kaca Kamar Mandi
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/pintu"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'pintu' ? "font-black text-xl" : ""}>
+                                Pintu Frameless
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/acp"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'acp' ? "font-black text-xl" : ""}>
+                                Curtain Wall & ACP
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="text-2xl font-nunito mt-8">Kategori <i class="font-bold">Stone</i></h2>
+                <ul class="mt-4 list-none">
+                    <li>
+                        <a href={"/category/table"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'table' ? "font-black text-xl" : ""}>
+                                Top Table
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/dinding"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'dinding' ? "font-black text-xl" : ""}>
+                                Dinding
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/lantai"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                            <span class={slug === 'lantai' ? "font-black text-xl" : ""}>
+                                Lantai
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="lg:w-3/4 w-full">
+                <div class="lg:hidden block mb-4 pt-4 lg:pt-0">
+                    <a href="#!" class="category-toggle font-nunito font-black flex items-center">
+                        <span class="material-symbols-rounded mr-2">
+                            sort
+                        </span>
+                        Lihat Kategori
+                    </a>
+                </div>
+                { slug && (
+                    <WorksCategory work={ category } />
+                ) }
+                <div class="w-full h-auto mt-8 px-4 lg:py-12 py-6 bg-white rounded-4xl">
+                    <div class="flex lg:flex-row flex-col justify-between">
+                        <div class="block pl-4 mb-4 lg:mb-0">
+                            <span class="text-base lg:text-lg">Tertarik dengan layanan Kami?</span>
+                            <h4 class="text-lg lg:text-2xl font-bold"><span class="underline">Hubungi Kami</span> untuk pembahasan lebih lanjut.</h4>
+                        </div>
+                        <a href="#!" class="flex flex-row items-center bg-green-500 text-white px-6 py-3 rounded-2xl hover:bg-green-400 transition-all font-comfortaa">
+                            <img src={wa.src} alt="wa" class="w-8 h-8 mr-4" />
+                            <span class="text-center w-full">
+                                Hubungi Kami
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryList = document.getElementById('category-list');
+            const toggleButton = document.querySelectorAll('.category-toggle');
+
+            toggleButton.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (categoryList?.classList.contains('-left-full')) {
+                        categoryList.classList.remove('-left-full');
+                        categoryList.classList.add('left-0');
+                    } else {
+                        categoryList?.classList.add('-left-full');
+                        categoryList?.classList.remove('left-0');
+                    }
+                });
+            });
+        });
+    </script>
+</Layout>

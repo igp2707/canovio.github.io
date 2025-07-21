@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import Service from '../components/Service.astro'
+import Work from '../components/Work.astro'
+import Client from '../components/Client.astro'
+import Promotion from '../components/Promotion.astro'
+
+import Welcome from '../components/Welcome.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Jasa Konstruksi Profesional | CANOVIO Glasstone" page="home">
+	<!-- <Welcome /> -->
+
+	<Hero />
+	<Service />
+	<Work />
+	<Client />
+	<Promotion />
+
+	<script>
+		window.addEventListener('load', () => {
+			const splash = document.getElementById('splash');
+			const logo = document.getElementById('logo-splash');
+			const text1 = document.getElementById('text1-splash');
+			const text2 = document.getElementById('text2-splash');
+
+			const heroX = document.querySelectorAll('.hero-content-x');
+			const heroY = document.querySelectorAll('.hero-content-y');
+
+			if (splash && logo && text1 && text2 && heroX && heroY) {
+				splash.classList.add('translate-y-full', 'opacity-0');
+				logo.classList.remove('translate-y-24');
+				text1.classList.remove('translate-y-10');
+				text2.classList.remove('translate-y-5');
+				setTimeout(() => {
+					splash.style.display = 'none';
+					for (let i = 0; i < heroX.length; i++) {
+						heroX[i].classList.remove('translate-x-[calc(100%+100px)]');
+					}
+					for (let i = 0; i < heroY.length; i++) {
+						heroY[i].classList.remove('translate-y-full');
+					}
+				}, 3500);
+			}
+
+		});
+	</script>
 </Layout>

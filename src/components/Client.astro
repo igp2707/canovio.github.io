@@ -1,0 +1,87 @@
+---
+import "@splidejs/splide/css"
+import { Splide, SplideTrack, SplideSlide } from "astro-splide";
+
+const options = {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    autoplay: true,
+    interval: 2000,
+    pagination: false,
+    arrows: false,
+    gap: "1rem",
+    breakpoints: {
+        640: {
+            perPage: 1,
+        },
+        768: {
+            perPage: 2,
+        },
+    },
+}
+---
+
+<section id="client" class="w-screen h-auto bg-[#342015] py-12 lg:py-24 px-4">
+    <div class="container mx-auto">
+        <div class="overflow-hidden w-full pb-2 text-center">
+            <h1 class="text-4xl font-nunito text-amber-50" data-aos="fade-up">
+                Bagaimana Pendapat Client Kami?
+            </h1>
+        </div>
+        <div class="overflow-hidden w-full pb-2">
+            <Splide
+                class='not-content'
+                options={ options }
+                aria-labelledby="autoplay-example-heading"
+                hasTrack={ false }
+                data-aos="fade-up"
+                data-aos-delay="100"
+                >
+                <div class="relative w-full h-auto mt-8">
+                    <SplideTrack>
+                        <SplideSlide>
+                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
+                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
+                                    "CANOVIO Glasstone telah memberikan layanan konstruksi yang sangat profesional. Proyek kami selesai tepat waktu dan dengan kualitas yang sangat baik."
+                                </p>
+                                <div class="flex flex-row items-center">
+                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
+                                        <img src="/images/client/client-1.jpg" alt="Client 1" class="w-full h-full object-cover absolute top-0 left-0" />
+                                    </div>
+                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 1</p>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
+                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
+                                    "Kami sangat puas dengan hasil kerja CANOVIO Glasstone. Tim mereka sangat profesional dan selalu siap membantu."
+                                </p>
+                                <div class="flex flex-row items-center">
+                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
+                                        <img src="/images/client/client-2.jpg" alt="Client 2" class="w-full h-full object-cover absolute top-0 left-0" />
+                                    </div>
+                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 2</p>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
+                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
+                                    "Pengalaman bekerja dengan CANOVIO Glasstone sangat menyenangkan. Mereka selalu mengutamakan kepuasan klien dan hasilnya sangat memuaskan."
+                                </p>
+                                <div class="flex flex-row items-center">
+                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
+                                        <img src="/images/client/client-3.jpg" alt="Client 3" class="w-full h-full object-cover absolute top-0 left-0" />
+                                    </div>
+                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 3</p>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                    </SplideTrack>
+                </div>
+            </Splide>
+        </div>
+    </div>
+</section>

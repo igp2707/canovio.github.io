@@ -1,0 +1,78 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from '../../layouts/Layout.astro'
+
+export const getStaticPaths = (() => {
+    return [
+        {
+            params: { slug: 'jenis-jenis-instalasi-aluminium' },
+            props: {
+                post: {
+                    title: 'Jenis-jenis Instalasi Aluminium',
+                    by: 'Admin',
+                    date: '17 Jul, 2025',
+                    image: '/images/bg-1.jpg',
+                    body: "<p class='mb-4 font-comfortaa'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, dolorem vel. Incidunt reprehenderit cum itaque harum corporis omnis error neque illo sed doloribus laboriosam, autem numquam, consectetur architecto aspernatur fugiat odio? Est atque nisi similique magnam corrupti vitae, voluptates blanditiis, tenetur ea deserunt delectus exercitationem ipsa sint impedit distinctio excepturi alias optio consectetur provident et? Ducimus tempora earum illo. Illo nostrum ex inventore. Explicabo culpa earum minima. Quibusdam dolor modi labore, suscipit itaque id quod.</p> <ul class='list-decimal text-2xl font-bold list-inside'><li><h2 class='lg:text-2xl text-lg font-nunito font-bold mb-2'>Lorem 1</h2><p class='font-comfortaa lg:text-base text-sm font-normal'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi doloremque illo voluptatem voluptates blanditiis nesciunt? Officiis voluptas nam accusantium, ipsam voluptatibus eveniet id placeat quam dolorum similique laudantium labore ad saepe ducimus quasi quod error incidunt molestiae reprehenderit quia earum harum corporis dolore? Assumenda iure impedit doloremque blanditiis voluptatem, accusamus deleniti totam porro, rerum quas, quis eius soluta obcaecati. Deserunt ipsam possimus aliquid nisi dolorem a voluptas, non suscipit, sunt quod saepe. Similique corporis, facere ratione ipsa quae ab minus. Dolor, architecto aut tempora consequatur animi incidunt doloremque facere porro itaque nisi magni illo asperiores, consequuntur placeat cumque molestiae repellendus. Ipsa distinctio ab odit corporis tempore eius ipsum. Necessitatibus tenetur odio sed, fugiat nisi amet veniam, vel magni dolore voluptas quas libero voluptatem minus veritatis accusantium tempore est deserunt. Repellendus laborum eius quod eum perspiciatis veniam velit, amet nostrum vero similique eveniet, unde impedit asperiores illo obcaecati. Eos molestiae error impedit totam, veniam nobis, nulla necessitatibus explicabo illum, sed recusandae laboriosam nesciunt eligendi asperiores nostrum. Ratione dolores maiores praesentium blanditiis, voluptate earum ducimus ex minus? Culpa, debitis! Laboriosam pariatur sunt unde quibusdam iure officia neque minima itaque impedit voluptatum nam et mollitia ducimus, excepturi debitis maiores ad eos quas dicta nihil necessitatibus dolore eius ipsum amet! Sapiente quasi quaerat temporibus ipsa natus. Tenetur repudiandae vero distinctio harum nisi? Eum quod quisquam voluptates quae illum eveniet provident repellendus amet quibusdam, nihil veritatis sit mollitia possimus repellat ex minus id suscipit perspiciatis aperiam odio ducimus quaerat! Velit, enim quisquam. Sed saepe dolorem quas sit, ex at deleniti mollitia expedita corrupti.</p></li><li><h2 class='lg:text-2xl text-lg font-nunito font-bold mb-2'>Lorem 2</h2><p class='font-comfortaa lg:text-base text-sm font-normal'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi doloremque illo voluptatem voluptates blanditiis nesciunt? Officiis voluptas nam accusantium, ipsam voluptatibus eveniet id placeat quam dolorum similique laudantium labore ad saepe ducimus quasi quod error incidunt molestiae reprehenderit quia earum harum corporis dolore? Assumenda iure impedit doloremque blanditiis voluptatem, accusamus deleniti totam porro, rerum quas, quis eius soluta obcaecati. Deserunt ipsam possimus aliquid nisi dolorem a voluptas, non suscipit, sunt quod saepe. Similique corporis, facere ratione ipsa quae ab minus. Dolor, architecto aut tempora consequatur animi incidunt doloremque facere porro itaque nisi magni illo asperiores, consequuntur placeat cumque molestiae repellendus. Ipsa distinctio ab odit corporis tempore eius ipsum. Necessitatibus tenetur odio sed, fugiat nisi amet veniam, vel magni dolore voluptas quas libero voluptatem minus veritatis accusantium tempore est deserunt. Repellendus laborum eius quod eum perspiciatis veniam velit, amet nostrum vero similique eveniet, unde impedit asperiores illo obcaecati. Eos molestiae error impedit totam, veniam nobis, nulla necessitatibus explicabo illum, sed recusandae laboriosam nesciunt eligendi asperiores nostrum. Ratione dolores maiores praesentium blanditiis, voluptate earum ducimus ex minus? Culpa, debitis! Laboriosam pariatur sunt unde quibusdam iure officia neque minima itaque impedit voluptatum nam et mollitia ducimus, excepturi debitis maiores ad eos quas dicta nihil necessitatibus dolore eius ipsum amet! Sapiente quasi quaerat temporibus ipsa natus. Tenetur repudiandae vero distinctio harum nisi? Eum quod quisquam voluptates quae illum eveniet provident repellendus amet quibusdam, nihil veritatis sit mollitia possimus repellat ex minus id suscipit perspiciatis aperiam odio ducimus quaerat! Velit, enim quisquam. Sed saepe dolorem quas sit, ex at deleniti mollitia expedita corrupti.</p></li><li><h2 class='lg:text-2xl text-lg font-nunito font-bold mb-2'>Lorem 3</h2><p class='font-comfortaa lg:text-base text-sm font-normal'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi doloremque illo voluptatem voluptates blanditiis nesciunt? Officiis voluptas nam accusantium, ipsam voluptatibus eveniet id placeat quam dolorum similique laudantium labore ad saepe ducimus quasi quod error incidunt molestiae reprehenderit quia earum harum corporis dolore? Assumenda iure impedit doloremque blanditiis voluptatem, accusamus deleniti totam porro, rerum quas, quis eius soluta obcaecati. Deserunt ipsam possimus aliquid nisi dolorem a voluptas, non suscipit, sunt quod saepe. Similique corporis, facere ratione ipsa quae ab minus. Dolor, architecto aut tempora consequatur animi incidunt doloremque facere porro itaque nisi magni illo asperiores, consequuntur placeat cumque molestiae repellendus. Ipsa distinctio ab odit corporis tempore eius ipsum. Necessitatibus tenetur odio sed, fugiat nisi amet veniam, vel magni dolore voluptas quas libero voluptatem minus veritatis accusantium tempore est deserunt. Repellendus laborum eius quod eum perspiciatis veniam velit, amet nostrum vero similique eveniet, unde impedit asperiores illo obcaecati. Eos molestiae error impedit totam, veniam nobis, nulla necessitatibus explicabo illum, sed recusandae laboriosam nesciunt eligendi asperiores nostrum. Ratione dolores maiores praesentium blanditiis, voluptate earum ducimus ex minus? Culpa, debitis! Laboriosam pariatur sunt unde quibusdam iure officia neque minima itaque impedit voluptatum nam et mollitia ducimus, excepturi debitis maiores ad eos quas dicta nihil necessitatibus dolore eius ipsum amet! Sapiente quasi quaerat temporibus ipsa natus. Tenetur repudiandae vero distinctio harum nisi? Eum quod quisquam voluptates quae illum eveniet provident repellendus amet quibusdam, nihil veritatis sit mollitia possimus repellat ex minus id suscipit perspiciatis aperiam odio ducimus quaerat! Velit, enim quisquam. Sed saepe dolorem quas sit, ex at deleniti mollitia expedita corrupti.</p></li></ul>",
+                }
+            }
+        }
+    ];
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params
+const { post } = Astro.props
+---
+
+<Layout title={ slug ? post.title+' | CANOVIO Glasstone' : 'Berita Tidak Ditemukan | CANOVIO Glasstone' } page="blog">
+    <section class="w-screen h-auto px-4 pt-24 pb-12 lg:py-24 bg-amber-50">
+        <div class="container mx-auto flex lg:flex-row flex-col gap-4">
+            <div class="lg:w-4/5 w-full">
+                <div class="w-full lg:h-96 h-48 overflow-hidden rounded-4xl">
+                    <img src={post.image} alt={slug} class="object-cover">
+                </div>
+                <div class="flex flex-row justify-between items-center my-4 lg:px-4 px-0">
+                    <span class="text-xs font-comfortaa bg-[#342015] text-amber-50 rounded-full py-1 px-2">Oleh: <b>{post.by}</b></span>
+                    <span class="text-xs font-comfortaa">{post.date}</span>
+                </div>
+                <article class="lg:text-base text-sm lg:px-4 px-0 text-justify" set:html={post.body} />
+            </div>
+            <div class="lg:w-1/5 w-full">
+                <h2 class="text-2xl font-nunito">Artikel Lain</h2>
+                <ul class="mt-4 list-none">
+                    <li class="mb-4">
+                        <div class="w-full h-fit">
+                            <img src="/images/bg-1.jpg" alt="bg-1" class="w-full h-24 rounded-2xl object-cover">
+                            <div class="flex flex-row gap-2 -mt-10 ml-2 mb-4">
+                                <span class="text-xs bg-[#342015] text-amber-50 rounded-full p-2 font-comfortaa">#aluminium</span>
+                                <span class="text-xs bg-[#342015] text-amber-50 rounded-full p-2 font-comfortaa">#stainless_steel</span>
+                            </div>
+                            <a href={"/article/jenis-jenis-instalasi-aluminium"} class="text-base font-nunito font-bold">Jenis-jenis Instalasi Aluminium</a>
+                            <div class="text-xs font-comfortaa font-bold">
+                                <p class="truncate line-clamp-2 whitespace-normal mt-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae saepe molestiae nostrum, ipsam natus explicabo? Alias, dolorem? Ea delectus iste reprehenderit sint id, porro voluptatem repellendus repellat aliquid hic quod distinctio dignissimos corrupti sunt. Doloremque, accusantium, autem mollitia soluta veritatis dolor facilis, consequatur sequi molestiae commodi libero asperiores error eaque quis. Ullam quo, hic accusantium distinctio fuga culpa eaque voluptas labore veniam sit, corrupti iste dolore blanditiis? Accusamus assumenda tenetur doloremque ea debitis consectetur vero aliquid similique, officiis velit! Commodi incidunt quaerat, praesentium nam aut maiores? Repudiandae reprehenderit corporis, ipsam nihil dolores laboriosam tempora aliquid voluptate! Nostrum, est quaerat corporis nisi pariatur esse modi dolorum aut dolor mollitia accusantium laboriosam cumque possimus totam distinctio at officiis. Non, ipsa officiis.
+                                </p>
+                            </div>
+                            <a href={"/article/jenis-jenis-instalasi-aluminium"} class="inline-block py-2 px-3 mt-2 rounded-2xl bg-[#342015] text-amber-50 font-comfortaa text-xs hover:bg-[#745748] ">Baca selengkapnya</a>
+                        </div>
+                    </li>
+                    <li class="mb-4">
+                        <div class="w-full h-fit">
+                            <img src="/images/bg-1.jpg" alt="bg-1" class="w-full h-24 rounded-2xl object-cover">
+                            <div class="flex flex-row gap-2 -mt-10 ml-2 mb-4">
+                                <span class="text-xs bg-[#342015] text-amber-50 rounded-full p-2 font-comfortaa">#aluminium</span>
+                                <span class="text-xs bg-[#342015] text-amber-50 rounded-full p-2 font-comfortaa">#stainless_steel</span>
+                            </div>
+                            <a href={"/article/jenis-jenis-instalasi-aluminium"} class="text-base font-nunito font-bold">Jenis-jenis Instalasi Aluminium</a>
+                            <div class="text-xs font-comfortaa font-bold">
+                                <p class="truncate line-clamp-2 whitespace-normal mt-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae saepe molestiae nostrum, ipsam natus explicabo? Alias, dolorem? Ea delectus iste reprehenderit sint id, porro voluptatem repellendus repellat aliquid hic quod distinctio dignissimos corrupti sunt. Doloremque, accusantium, autem mollitia soluta veritatis dolor facilis, consequatur sequi molestiae commodi libero asperiores error eaque quis. Ullam quo, hic accusantium distinctio fuga culpa eaque voluptas labore veniam sit, corrupti iste dolore blanditiis? Accusamus assumenda tenetur doloremque ea debitis consectetur vero aliquid similique, officiis velit! Commodi incidunt quaerat, praesentium nam aut maiores? Repudiandae reprehenderit corporis, ipsam nihil dolores laboriosam tempora aliquid voluptate! Nostrum, est quaerat corporis nisi pariatur esse modi dolorum aut dolor mollitia accusantium laboriosam cumque possimus totam distinctio at officiis. Non, ipsa officiis.
+                                </p>
+                            </div>
+                            <a href={"/article/jenis-jenis-instalasi-aluminium"} class="inline-block py-2 px-3 mt-2 rounded-2xl bg-[#342015] text-amber-50 font-comfortaa text-xs hover:bg-[#745748] ">Baca selengkapnya</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</Layout>
