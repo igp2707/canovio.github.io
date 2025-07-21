@@ -6,8 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "astro build && gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -15,6 +14,7 @@
     "astro": "^5.11.0",
     "astro-lightgallery": "^2.0.0",
     "astro-splide": "^2.0.0",
+    "firebase-tools": "^14.11.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

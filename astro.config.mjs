@@ -9,6 +9,4 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   // site: 'http://localhost:4321',
-  base: '/canovio/',
-  output: 'static',
 });
