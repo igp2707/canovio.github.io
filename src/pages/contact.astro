@@ -4,22 +4,28 @@ import Layout from '../layouts/Layout.astro'
 import email from '../assets/email-white.png'
 import wa from '../assets/wa-white.png'
 import ig from '../assets/ig-white.png'
-import tiktok from '../assets/tiktok-white.png'
-import yt from '../assets/yt-white.png'
+import MapComponent from '../components/MapComponent.jsx';
 ---
 
-<Layout title="Kontak Kami | CANOVIO Glasstone" page="contact">
-    <section class="w-screen h-auto px-4 pt-24 pb-12 lg:py-24 bg-amber-50">
+<Layout title="Kontak Kami | CANOVIO Glasswork" page="contact"
+    description="Hubungi kami untuk informasi lebih lanjut tentang layanan kaca dan aluminium yang kami tawarkan."
+    og_title="Canovio Glasswork | Kontak Kami"
+    og_description="Hubungi kami untuk informasi lebih lanjut tentang layanan kaca dan aluminium yang kami tawarkan."
+    og_image="/images/bg-2.jpg"
+    og_url="https://canovio.com/contact"
+    og_type="website"
+>
+    <section class="w-screen h-auto min-h-[calc(100vh-250px)] px-4 pt-24 pb-12 bg-[#ebeceb]">
         <div class="container mx-auto">
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
-                <div class="w-full h-fit bg-white p-6 py-8 rounded-4xl">
-                    <span class="text-base font-comfortaa text-[#342015] font-bold">
+            <div class="flex lg:flex-row flex-col-reverse gap-4">
+                <div class="w-full h-96 lg:h-[calc(340px)] bg-[#ebeceb] rounded-4xl">
+                    <!-- <span class="text-base font-comfortaa text-[#0c1b33] font-bold">
                         Untuk pembahasan lebih lanjut
                     </span>
                     <h2 class="text-3xl font-bold font-nunito my-4">
                         Tidak perlu ragu untuk menghubungi Kami..
-                    </h2>
-                    <form 
+                    </h2> -->
+                    <!-- <form 
                         action="https://formspree.io/f/yourFormID" 
                         method="POST" 
                         class="space-y-4"
@@ -47,54 +53,73 @@ import yt from '../assets/yt-white.png'
                         <div class="w-full text-center">
                             <button 
                             type="submit"
-                            class="bg-[#342015] text-white px-6 py-3 rounded-4xl hover:bg-[#745748] transition w-fit"
+                            class="bg-[#0c1b33] text-[#ebeceb] px-6 py-3 rounded-4xl hover:bg-[#363f48] transition w-fit"
                             disabled
                             >
                             Kirim Pesan
                             </button>
                         </div>
-                    </form>
-                </div>
-                <div class="w-full lg:h-[calc(420px)] h-fit">
-                    <div class="hidden w-full h-1/2 overflow-hidden rounded-4xl lg:flex justify-center items-center">
-                        <img src="/images/bg-3.jpg" alt="bg-3" class="w-full h-auto">
+                    </form> -->
+                    <div class="w-full h-full overflow-hidden rounded-4xl flex flex-col justify-center items-center relative">
+                        <!-- <img src="/images/bg-3.jpg" alt="bg-3" class="w-full h-auto"> -->
+                        <MapComponent client:load client:only />
+                        <div class="flex lg:w-[calc(100%-0.25rem*8)] w-full h-auto lg:absolute lg:bottom-4 lg:left-4 lg:mt-0 mt-4 relative flex-col gap-2 bg-white p-4 rounded-2xl">
+                            <h2 class="lg:text-2xl text-base font-nunito font-bold text-[#0c1b33]">Lokasi Kami</h2>
+                            <p class="lg:text-sm text-xs font-comfortaa text-gray-700">Grand Slipi Tower Lantai 5 Unit i.1, Jalan S. Parman Kav 22-24, RT.001, RW.004, Kelurahan Palmerah, Kecamatan Palmerah, Jakarta Barat, 11480</p>
+                        </div>
+                        <a href="https://www.google.com/maps/?q=-6.200699524131531,106.79868551702141" target="_blank" 
+                            class="absolute top-2 right-4 flex h-12 px-3 items-center justify-center bg-white rounded-full text-[#0c1b33] font-comfortaa font-bold text-lg hover:bg-[#ebeceb] transition-all">
+                            <span class="material-symbols-rounded">
+                                directions
+                            </span>
+                        </a>
                     </div>
-                    <div class="w-full h-auto p-6 rounded-4xl bg-[#342015] mt-4 text-amber-50">
+                </div>
+                <div class="w-full h-fit">
+                    <div class="w-full h-auto p-6 rounded-4xl bg-[#0c1b33] text-[#ebeceb]">
                         <h4 class="text-xl font-medium font-nunito">
                             Kontak Kami
                         </h4>
-                        <ul class="list-none mt-4 space-y-3">
+                        <ul class="list-none mt-4 space-y-3 pb-2">
                             <li>
-                                <a href="#!" class="flex flex-row items-center bg-[#745748] rounded-3xl p-3 hover:bg-[#9b7866]">
+                                <a href="mailto:canovioglasswork@gmail.com" class="flex flex-row items-center bg-[#363f48] rounded-3xl p-3 hover:bg-[#9b7866]">
                                     <div class="w-12 h-12 p-2 bg-[#9b7866] rounded-full mr-4">
                                         <img src={email.src} alt="email-icon" class="w-full h-auto">
                                     </div>
-                                    <span class="text-base font-comfortaa font-bold">contoh@email.com</span>
+                                    <span class="text-base font-comfortaa font-bold truncate whitespace-nowrap line-clamp-1">canovioglasswork@gmail.com</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" class="flex flex-row items-center bg-[#745748] rounded-3xl p-3 hover:bg-[#9b7866]">
+                                <a href="https://wa.me/62895328972160/?text=Halo%20CANOVIO%20Glasswork,%0A%0ASaya%20tertarik%20dengan%20layanan%20yang%20anda%20sediakan.%20Apa%20kita%20bisa%20bahas%20lebih%20lanjut?" class="flex flex-row items-center bg-[#363f48] rounded-3xl p-3 hover:bg-[#9b7866]">
                                     <div class="w-12 h-12 p-2 bg-[#9b7866] rounded-full mr-4">
                                         <img src={wa.src} alt="wa-icon" class="w-full h-auto">
                                     </div>
-                                    <span class="text-base font-comfortaa font-bold">(+62) 812 3456 7890</span>
+                                    <span class="text-base font-comfortaa font-bold">(+62) 895 3289 72160</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/canovioglasswork" class="flex flex-row items-center bg-[#363f48] rounded-3xl p-3 hover:bg-[#9b7866]">
+                                    <div class="w-12 h-12 p-2 bg-[#9b7866] rounded-full mr-4">
+                                        <img src={ig.src} alt="wa-icon" class="w-full h-auto">
+                                    </div>
+                                    <span class="text-base font-comfortaa font-bold">@canovioglasswork</span>
                                 </a>
                             </li>
                         </ul>
-                        <h4 class="text-lg font-medium font-nunito mt-4 text-center">
+                        <!-- <h4 class="text-lg font-medium font-nunito mt-4 text-center">
                             atau Anda bisa mengunjungi media sosial Kami
                         </h4>
                         <div class="flex flex-row justify-center gap-4 items-center mt-4">
-                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#363f48] rounded-full mr-4 hover:bg-[#9b7866]">
                                 <img src={ig.src} alt="wa-icon" class="w-full h-auto">
                             </a>
-                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#363f48] rounded-full mr-4 hover:bg-[#9b7866]">
                                 <img src={tiktok.src} alt="wa-icon" class="w-full h-auto">
                             </a>
-                            <a href="#!" class="w-12 h-12 p-2 bg-[#745748] rounded-full mr-4 hover:bg-[#9b7866]">
+                            <a href="#!" class="w-12 h-12 p-2 bg-[#363f48] rounded-full mr-4 hover:bg-[#9b7866]">
                                 <img src={yt.src} alt="wa-icon" class="w-full h-auto">
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

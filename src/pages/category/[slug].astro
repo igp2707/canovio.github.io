@@ -75,6 +75,26 @@ export const getStaticPaths = (() => {
             }
         },
         { 
+            params: { slug: 'toilet' },
+            props: {
+                category : {
+                    title: 'Cubical Toilet',
+                    desc: 'Pekerjaan instalasi kaca pada cubical toilet meliputi pemasangan panel kaca sebagai pembatas antar ruang toilet untuk menciptakan area yang privat, bersih, dan modern. Proses ini dilakukan dengan menggunakan kaca berkualitas tinggi yang tahan terhadap kelembapan dan mudah dibersihkan, serta rangka aluminium atau stainless steel untuk memastikan kekuatan dan keamanan. Instalasi dilakukan secara presisi agar hasil akhir rapi, kokoh, dan sesuai dengan desain interior, sehingga memberikan kenyamanan dan estetika pada fasilitas toilet.',
+                    images: [
+                        { src: '/images/category/cubical-toilet/1.jpeg' },
+                        { src: '/images/category/cubical-toilet/2.jpeg' },
+                        { src: '/images/category/cubical-toilet/3.jpeg' },
+                        { src: '/images/category/cubical-toilet/4.jpeg' },
+                        { src: '/images/category/cubical-toilet/5.jpeg' },
+                        { src: '/images/category/cubical-toilet/6.jpeg' },
+                        { src: '/images/category/cubical-toilet/7.jpeg' },
+                        { src: '/images/category/cubical-toilet/8.jpeg' },
+                        { src: '/images/category/cubical-toilet/9.jpeg' },
+                    ]
+                }
+            }
+        },
+        { 
             params: { slug: 'kaca' },
             props: {
                 category : {
@@ -86,15 +106,6 @@ export const getStaticPaths = (() => {
                         { src: '/images/category/kamar-mandi/3.jpeg' },
                         { src: '/images/category/kamar-mandi/4.jpeg' },
                         { src: '/images/category/kamar-mandi/5.jpeg' },
-                        { src: '/images/category/kamar-mandi/6.jpeg' },
-                        { src: '/images/category/kamar-mandi/7.jpeg' },
-                        { src: '/images/category/kamar-mandi/8.jpeg' },
-                        { src: '/images/category/kamar-mandi/9.jpeg' },
-                        { src: '/images/category/kamar-mandi/10.jpeg' },
-                        { src: '/images/category/kamar-mandi/11.jpeg' },
-                        { src: '/images/category/kamar-mandi/12.jpeg' },
-                        { src: '/images/category/kamar-mandi/13.jpeg' },
-                        { src: '/images/category/kamar-mandi/14.jpeg' },
                     ]
                 }
             }
@@ -138,68 +149,15 @@ export const getStaticPaths = (() => {
                 }
             }
         },
-        { 
-            params: { slug: 'table' },
-            props: {
-                category : {
-                    title: 'Top Table Kitchen',
-                    desc: 'Pekerjaan instalasi batu untuk top-table pada dapur dilakukan dengan teliti untuk memastikan permukaan meja dapur kokoh, rata, dan tahan lama. Proses ini meliputi pemotongan batu sesuai ukuran desain, pemasangan dengan perekat khusus, serta finishing pada bagian tepi agar tampak rapi dan estetis. Material batu yang digunakan memberikan tampilan elegan sekaligus memudahkan perawatan, sehingga dapur menjadi lebih fungsional dan menarik.',
-                    images: [
-                        { src: '/images/category/top-table/1.jpeg' },
-                        { src: '/images/category/top-table/2.jpeg' },
-                        { src: '/images/category/top-table/3.jpeg' },
-                        { src: '/images/category/top-table/4.jpeg' },
-                    ]
-                }
-            }
-        },
-        { 
-            params: { slug: 'dinding' },
-            props: {
-                category : {
-                    title: 'Dinding',
-                    desc: 'Pekerjaan instalasi batu untuk dinding merupakan proses pemasangan material batu alam atau buatan pada permukaan dinding, yang bertujuan untuk memberikan tampilan estetis sekaligus meningkatkan kekuatan struktur. Pada ruang keluarga, pemasangan batu dinding sering digunakan untuk menciptakan nuansa hangat, alami, dan elegan, serta menjadi focal point yang memperindah ruangan. Proses ini meliputi persiapan permukaan, pemilihan jenis batu yang sesuai, pemasangan dengan teknik yang tepat, dan finishing agar hasil akhir tampak rapi dan tahan lama.',
-                    images: [
-                        { src: '/images/category/dinding/1.jpeg' },
-                        { src: '/images/category/dinding/2.jpeg' },
-                        { src: '/images/category/dinding/3.jpeg' },
-                        { src: '/images/category/dinding/4.jpeg' },
-                        { src: '/images/category/dinding/5.jpeg' },
-                        { src: '/images/category/dinding/6.jpeg' },
-                        { src: '/images/category/dinding/7.jpeg' },
-                        { src: '/images/category/dinding/8.jpeg' },
-                        { src: '/images/category/dinding/9.jpeg' },
-                        { src: '/images/category/dinding/10.jpeg' },
-                    ]
-                }
-            }
-        },
-        { 
-            params: { slug: 'lantai' },
-            props: {
-                category : {
-                    title: 'Lantai',
-                    desc: 'Pekerjaan instalasi batu untuk lantai ruangan merupakan proses pemasangan material batu alam atau buatan pada permukaan lantai agar tampak rapi, kuat, dan tahan lama. Proses ini meliputi persiapan permukaan, pemilihan jenis batu yang sesuai, pemotongan, penataan pola, serta pemasangan menggunakan perekat khusus. Dengan teknik yang tepat, lantai batu dapat memberikan kesan estetis sekaligus meningkatkan nilai fungsi dan keindahan ruangan.',
-                    images: [
-                        { src: '/images/category/lantai/1.jpeg' },
-                        { src: '/images/category/lantai/2.jpeg' },
-                        { src: '/images/category/lantai/3.jpeg' },
-                        { src: '/images/category/lantai/4.jpeg' },
-                        { src: '/images/category/lantai/5.jpeg' },
-                        { src: '/images/category/lantai/6.jpeg' },
-                        { src: '/images/category/lantai/7.jpeg' },
-                        { src: '/images/category/lantai/8.jpeg' },
-                        { src: '/images/category/lantai/9.jpeg' },
-                        { src: '/images/category/lantai/10.jpeg' },
-                        { src: '/images/category/lantai/11.jpeg' },
-                        { src: '/images/category/lantai/12.jpeg' },
-                        { src: '/images/category/lantai/13.jpeg' },
-                    ]
-                }
-            }
-        },
     ];
 }) satisfies GetStaticPaths;
+
+function truncateString(str:String, maxLength:number) {
+    if (str.length > maxLength)
+    return str.slice(0, maxLength) + '...';
+    
+    return str;
+}
 
 const { slug } = Astro.params
 const { category } = Astro.props
@@ -209,10 +167,19 @@ import WorksCategory from '../../components/WorksCategory.astro';
 import wa from '../../assets/wa-white.png'
 ---
 
-<Layout title={ slug ? category.title+" | CANOVIO Glasstone" : "Kategori Tidak Ditemukan | CANOVIO Glasstone"} page="category">
-    <section class="w-screen h-auto px-4 pt-18 lg:pt-24 bg-amber-50">
+<Layout 
+    title={ slug ? category.title+" | CANOVIO Glasswork" : "Kategori Tidak Ditemukan | CANOVIO Glaswork"} 
+    description={ slug ? truncateString(category.desc, 155) : "Mohon maaf, kategori tidak ditemukan." }
+    page="category"
+    og_title={ slug ? category.title+" | CANOVIO Glasswork" : "Kategori Tidak Ditemukan | CANOVIO Glaswork" }
+    og_description={ slug ? truncateString(category.desc, 155) : "Mohon maaf, kategori tidak ditemukan." }
+    og_image={ slug ? category.images[0]?.src : "/images/bg-2.jpg" }
+    og_url={ slug ? "https://canovio.com/category/"+slug : "https://canovio.com/category/not-found" }
+    og_type="website"
+    >
+    <section class="w-screen h-auto px-4 pt-18 lg:pt-24 bg-[#ebeceb]">
         <div class="container mx-auto flex lg:flex-row flex-col pb-12 relative">
-            <div id="category-list" class="lg:w-1/4 w-full h-full pl-4 lg:pl-0 pt-4 lg:pt-0 lg:z-0 z-50 lg:relative fixed bg-amber-50 transition-all duration-500 lg:left-0 -left-full">
+            <div id="category-list" class="lg:w-1/4 w-full h-full pl-4 lg:pl-0 pt-4 lg:pt-0 lg:z-0 z-50 lg:relative fixed bg-[#ebeceb] transition-all duration-500 lg:left-0 -left-full">
                 <div class="lg:hidden block mb-4">
                     <a href="#!" class="category-toggle font-nunito font-black flex items-center">
                         <span class="material-symbols-rounded mr-2">
@@ -221,76 +188,59 @@ import wa from '../../assets/wa-white.png'
                         Tutup
                     </a>
                 </div>
-                <h2 class="text-2xl font-nunito">Kategori <i class="font-bold">Glass</i></h2>
+                <h2 class="text-2xl font-nunito">Kategori <span class="font-bold">Layanan</span></h2>
                 <ul class="mt-4 list-none">
                     <li>
-                        <a href={"/category/aluminium"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/aluminium"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'aluminium' ? "font-black text-xl" : ""}>Aluminium</span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/kanopi"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/kanopi"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'kanopi' ? "font-black text-xl" : ""}>
                                 Kanopi
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/railing"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/railing"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'railing' ? "font-black text-xl" : ""}>
                                 Railing
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/cermin"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/cermin"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'cermin' ? "font-black text-xl" : ""}>
                                 Cermin
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/kaca"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/toilet"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
+                            <span class={slug === 'toilet' ? "font-black text-xl" : ""}>
+                                Cubical Toilet
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"/category/kaca"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'kaca' ? "font-black text-xl" : ""}>
                                 Kaca Kamar Mandi
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/pintu"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/pintu"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'pintu' ? "font-black text-xl" : ""}>
                                 Pintu Frameless
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a href={"/category/acp"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
+                        <a href={"/category/acp"} class="text-base font-comfortaa my-2 block hover:text-[#0c1b33] transition-colors">
                             <span class={slug === 'acp' ? "font-black text-xl" : ""}>
                                 Curtain Wall & ACP
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="text-2xl font-nunito mt-8">Kategori <i class="font-bold">Stone</i></h2>
-                <ul class="mt-4 list-none">
-                    <li>
-                        <a href={"/category/table"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
-                            <span class={slug === 'table' ? "font-black text-xl" : ""}>
-                                Top Table
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href={"/category/dinding"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
-                            <span class={slug === 'dinding' ? "font-black text-xl" : ""}>
-                                Dinding
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href={"/category/lantai"} class="text-base font-comfortaa my-2 block hover:text-[#342015] transition-colors">
-                            <span class={slug === 'lantai' ? "font-black text-xl" : ""}>
-                                Lantai
                             </span>
                         </a>
                     </li>
@@ -308,18 +258,22 @@ import wa from '../../assets/wa-white.png'
                 { slug && (
                     <WorksCategory work={ category } />
                 ) }
-                <div class="w-full h-auto mt-8 px-4 lg:py-12 py-6 bg-white rounded-4xl">
-                    <div class="flex lg:flex-row flex-col justify-between">
-                        <div class="block pl-4 mb-4 lg:mb-0">
-                            <span class="text-base lg:text-lg">Tertarik dengan layanan Kami?</span>
-                            <h4 class="text-lg lg:text-2xl font-bold"><span class="underline">Hubungi Kami</span> untuk pembahasan lebih lanjut.</h4>
+                <div class="overflow-hidden w-full h-auto">
+                    <div class="w-full h-auto mt-8 px-4 lg:py-12 py-6 bg-white rounded-4xl" data-aos="fade-up">
+                        <div class="flex lg:flex-row flex-col justify-between">
+                            <div class="block pl-4 mb-4 lg:mb-0">
+                                <span class="text-base lg:text-lg">Tertarik dengan layanan Kami?</span>
+                                <h4 class="text-lg lg:text-2xl font-bold"><span class="underline">Hubungi Kami</span> untuk pembahasan lebih lanjut.</h4>
+                            </div>
+                            <a 
+                                href={"https://wa.me/62895328972160/?text=Halo%20CANOVIO%20Glasswork,%0A%0ASaya%20tertarik%20dengan%20layanan%20Instalasi%20"+category.title+"%20yang%20anda%20sediakan.%20Apa%20kita%20bisa%20bahas%20lebih%20lanjut?"} 
+                                class="flex flex-row items-center bg-green-500 text-[#ebeceb] px-6 py-3 rounded-tl-2xl rounded-br-2xl hover:bg-green-400 transition-all font-comfortaa">
+                                <img src={wa.src} alt="wa" class="w-8 h-8 mr-4" />
+                                <span class="text-center w-full">
+                                    Hubungi Kami
+                                </span>
+                            </a>
                         </div>
-                        <a href="#!" class="flex flex-row items-center bg-green-500 text-white px-6 py-3 rounded-2xl hover:bg-green-400 transition-all font-comfortaa">
-                            <img src={wa.src} alt="wa" class="w-8 h-8 mr-4" />
-                            <span class="text-center w-full">
-                                Hubungi Kami
-                            </span>
-                        </a>
                     </div>
                 </div>
             </div>

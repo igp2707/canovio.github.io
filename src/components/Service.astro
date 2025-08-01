@@ -31,46 +31,43 @@ const services = [
         title: 'Railing'
     },
     { 
-        src: '/images/category/top-table/1.jpeg',
-        url: 'table',
-        title: 'Top-Table'
+        src: '/images/category/cubical-toilet/1.jpeg',
+        url: 'cermin',
+        title: 'Cermin'
     },
     { 
-        src: '/images/category/dinding/1.jpeg',
-        url: 'dinding',
-        title: 'Dinding'
-    },
-    { 
-        src: '/images/category/lantai/1.jpeg',
-        url: 'lantai',
-        title: 'Lantai' 
+        src: '/images/category/cubical-toilet/2.jpeg',
+        url: 'toilet',
+        title: 'Cubical Toilet'
     },
 ]
 ---
 
-<section id="service" class="w-screen h-auto bg-[#b79c6d] py-12 lg:py-24 px-4">
+<section id="service" class="w-screen h-auto bg-[#363f48] py-12 lg:py-24 px-4">
     <div class="container mx-auto">
-        <div class="flex flex-col justify-center p-2 lg:p-8 text-white">
-            <div class="overflow-hidden w-full">
-                <h1 class="text-4xl lg:text-6xl font-nunito text-white text-center" data-aos="fade-up">
-                    Layanan yang Kami Tawarkan
-                </h1>
+        <div class="flex flex-col lg:flex-row justify-center items-center lg:justify-between gap-4">
+            <div class="flex flex-col justify-center p-2 lg:p-8 text-[#ebeceb] w-full lg:w-1/3">
+                <div class="overflow-hidden w-full">
+                    <h1 class="text-4xl lg:text-6xl font-nunito text-[#ebeceb] text-center lg:text-left" data-aos="fade-up">
+                        Layanan yang Kami Tawarkan
+                    </h1>
+                </div>
+                <div class="overflow-hidden w-full mt-4 mb-4 lg:mt-8 lg:mb-0">
+                    <p class="text-sm lg:text-base font-comfortaa text-[#ebeceb] text-center lg:text-left" data-aos="fade-up" data-aos-delay="100">
+                        Kami menyediakan berbagai layanan instalasi kaca. Setiap proyek dikerjakan dengan profesionalisme dan perhatian terhadap detail untuk memastikan kepuasan klien.
+                    </p>
+                </div>
             </div>
-            <div class="overflow-hidden w-full mt-4 mb-4 lg:mt-8 lg:mb-0">
-                <p class="text-sm lg:text-base font-comfortaa text-amber-50" data-aos="fade-up" data-aos-delay="100">
-                    Kami menyediakan berbagai layanan instalasi baik itu kaca maupun batu alam. Setiap proyek dikerjakan dengan profesionalisme dan perhatian terhadap detail untuk memastikan kepuasan klien.
-                </p>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full h-fit overflow-hidden lg:w-2/3">
+                { services.map(srv => 
+                    <a href={Astro.site + "category/" + srv.url} class="w-full h-36 flex items-center justify-center overflow-hidden rounded-4xl relative group" data-aos="fade-up" >
+                        <div class="w-full h-full flex justify-center items-center z-10 text-center bg-[#0c1b33] text-[#ebeceb] font-comfortaa font-bold text-xs lg:text-base uppercase absolute opacity-75 transition-all duration-300 hover:opacity-100">
+                            {srv.title}
+                        </div>
+                        <img src={srv.src} alt="service" class="w-full h-auto object-cover z-0"/>
+                    </a>
+                ) }
             </div>
-        </div>
-        <div class="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-4 w-full h-fit overflow-hidden">
-            { services.map(srv => 
-                <a href={Astro.site + "category/" + srv.url} class="w-full h-36 flex items-center justify-center overflow-hidden rounded-4xl relative group" data-aos="fade-up" >
-                    <div class="w-full h-full flex justify-center items-center z-10 text-center bg-[#342015] text-amber-50 font-comfortaa font-bold text-xs lg:text-xl uppercase absolute opacity-75 transition-all duration-300 hover:opacity-100">
-                        {srv.title}
-                    </div>
-                    <img src={srv.src} alt="service" class="w-full h-auto object-cover z-0"/>
-                </a>
-            ) }
         </div>
     </div>
 </section>

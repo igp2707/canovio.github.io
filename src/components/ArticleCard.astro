@@ -1,0 +1,26 @@
+---
+const { article, slug } = Astro.props;
+---
+<div class="overflow-hidden w-full h-auto">
+    <div class="w-full h-fit" data-aos="fade-up">
+        <img src={ article.image } alt={ article.title } class="w-full h-48 rounded-2xl object-cover">
+        <div class="flex flex-row gap-2 mt-4 mb-4 flex-nowrap overflow-x-auto">
+            {article.tags.slice(0,2).map((tag:String) => (
+                <span class="text-xs bg-[#0c1b33] text-[#ebeceb] rounded-full p-2 font-comfortaa">
+                    {tag}
+                </span>
+            ))}
+        </div>
+        <div class="flex flex-row justify-between items-center my-2">
+            <span class="text-xs font-comfortaa">{ article.by }</span>
+            <span class="text-xs font-comfortaa">{ article.date }</span>
+        </div>
+        <a href={"/article/"+slug} class="text-xl font-nunito font-bold whitespace-normal truncate lg:line-clamp-1 line-clamp-2">{ article.title }</a>
+        <div class="text-sm font-comfortaa font-bold">
+            <p class="truncate lg:line-clamp-3 line-clamp-2 whitespace-normal mt-2">
+                { article.shortDesc }
+            </p>
+        </div>
+        <a href={"/article/"+slug} class="inline-block py-3 px-4 mt-4 rounded-tl-2xl rounded-br-2xl bg-[#0c1b33] text-[#ebeceb] font-comfortaa text-xs hover:bg-[#363f48] ">Baca selengkapnya</a>
+    </div>
+</div>

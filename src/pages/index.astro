@@ -6,47 +6,53 @@ import Work from '../components/Work.astro'
 import Client from '../components/Client.astro'
 import Promotion from '../components/Promotion.astro'
 
-import Welcome from '../components/Welcome.astro'
+
+const clients = [
+	{ 
+		name: "Mr. Robin", 
+		city: "Sentul City, Bogor",
+		image: "/images/client/user_male.png",
+		testimonial: "CANOVIO Glasswork telah memberikan layanan instalasi aluminium yang sangat profesional. Proyek kami selesai tepat waktu dan dengan kualitas yang sangat baik." 
+	},
+	{ 
+		name: "Mr. Tjong", 
+		city: "Tanjung Duren, Jakarta",
+		image: "/images/client/user_male.png",
+		testimonial: "Kami sangat puas dengan hasil kerja CANOVIO Glasswork. Tim mereka sangat profesional dan selalu siap membantu."
+	},
+	{ 
+		name: "Mr. Johan", 
+		city: "Pantai Indah Kapuk, Jakarta",
+		image: "/images/client/user_male.png",
+		testimonial: "Pengalaman bekerja dengan CANOVIO Glasswork sangat menyenangkan. Mereka selalu mengutamakan kepuasan klien dan hasilnya sangat memuaskan."
+	},
+	{ 
+		name: "Mrs. Andi", 
+		city: "Tangerang Selatan",
+		image: "/images/client/user_female.png",
+		testimonial: "CANOVIO Glasswork memberikan solusi yang tepat untuk kebutuhan kaca dan aluminium di rumah kami. Hasilnya sangat memuaskan dan sesuai harapan."
+	},
+];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Jasa Konstruksi Profesional | CANOVIO Glasstone" page="home">
+<Layout 
+	title="CANOVIO Glasswork | Crafting Clarity in Architecture" 
+	description="Canovio menyediakan jasa pemasangan kanopi kaca tempered minimalis—lebih terang, kuat, dan elegan untuk hunian modern di Jabodetabek."
+	page="home"
+	og_title="Canovio Glasswork | Crafting Clarity in Architecture"
+	og_description="Kami melayani pemasangan kaca dan aluminium untuk bangunan rumah, kantor, hingga ruko."
+	og_image="/images/bg-2.jpg"
+	og_url="https://canovio.com/"
+	og_type="website"
+	>
 	<!-- <Welcome /> -->
 
 	<Hero />
 	<Service />
 	<Work />
-	<Client />
+	<Client clients={clients} />
 	<Promotion />
-
-	<script>
-		window.addEventListener('load', () => {
-			const splash = document.getElementById('splash');
-			const logo = document.getElementById('logo-splash');
-			const text1 = document.getElementById('text1-splash');
-			const text2 = document.getElementById('text2-splash');
-
-			const heroX = document.querySelectorAll('.hero-content-x');
-			const heroY = document.querySelectorAll('.hero-content-y');
-
-			if (splash && logo && text1 && text2 && heroX && heroY) {
-				splash.classList.add('translate-y-full', 'opacity-0');
-				logo.classList.remove('translate-y-24');
-				text1.classList.remove('translate-y-10');
-				text2.classList.remove('translate-y-5');
-				setTimeout(() => {
-					splash.style.display = 'none';
-					for (let i = 0; i < heroX.length; i++) {
-						heroX[i].classList.remove('translate-x-[calc(100%+100px)]');
-					}
-					for (let i = 0; i < heroY.length; i++) {
-						heroY[i].classList.remove('translate-y-full');
-					}
-				}, 3500);
-			}
-
-		});
-	</script>
 </Layout>

@@ -1,0 +1,246 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from '../../../layouts/Layout.astro'
+import ArticleCard from '../../../components/ArticleCard.astro'
+
+export const getStaticPaths = (({ paginate }) => {
+    const articles = [
+    {
+      "slug": "5-keunggulan-memilih-kanopi-kaca-untuk-hunian-modern",
+      "post": {
+        "title": "5 Keunggulan Memilih Kanopi Kaca untuk Hunian Modern",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/kanopi/1.jpeg",
+        "tags": ["#kanopi", "#kaca", "#minimalis"],
+        "body": "<p class='mb-4 font-comfortaa'>Kanopi kaca semakin populer sebagai pilihan utama untuk hunian modern karena menawarkan kombinasi antara estetika, fungsionalitas, dan kenyamanan. Dengan desain yang transparan dan elegan, kanopi kaca mampu menghadirkan pencahayaan alami ke dalam rumah sekaligus memberikan perlindungan optimal dari cuaca. Selain itu, material kaca yang digunakan umumnya tahan lama, mudah dirawat, dan cocok diaplikasikan pada berbagai area seperti teras, carport, maupun ruang outdoor.</p>",
+        "shortDesc": "Kanopi kaca populer untuk hunian modern karena estetika, fungsionalitas, dan pencahayaan alami yang diberikannya."
+      }
+    },
+    {
+      "slug": "pintu-kamar-mandi-frameless-solusi-estetik-dan-anti-bocor",
+      "post": {
+        "title": "Pintu Kamar Mandi Frameless: Solusi Estetik & Anti Bocor",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/kamar-mandi/2.jpeg",
+        "tags": ["#pintu_frameless", "#kaca", "#estetik", "#anti_bocor"],
+        "body": "<h2>Pintu Frameless vs Pintu Biasa</h2><p class='mb-4'>Pintu frameless kamar mandi menggunakan kaca tempered setebal 8-12 mm tanpa bingkai logam, sehingga bebas karat dan lebih stylish.</p><ul><li><strong>Anti Bocor</strong>: Sistem seal silicone khusus di bagian bawah.</li><li><strong>Aman</strong>: Kaca tempered pecah menjadi butiran tumpul.</li><li><strong>Custom Desain</strong>: Bisa dipadukan dengan handle stainless atau motif frosted.</li></ul><h3>Tips Memilih Model</h3><p>Pilih <strong>sliding door</strong> untuk kamar mandi kecil, atau <strong>pivot door</strong> untuk kesan mewah. Lihat <a href='/galeri' title='Galeri Pintu Frameless'>contoh desain di sini</a>.</p>",
+        "shortDesc": "Pintu kamar mandi frameless kini menjadi pilihan favorit untuk hunian modern karena tampilannya yang minimalis dan elegan."
+      }
+    },
+    {
+      "slug": "railing-kaca-vs-railing-besi-mana-yang-lebih-cocok",
+      "post": {
+        "title": "Railing Kaca vs Railing Besi: Mana yang Lebih Cocok?",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/railing/2.jpeg",
+        "tags": ["#pintu_frameless", "#kaca", "#estetik", "#anti_bocor"],
+        "body": "<h2>Perbandingan Material Railing</h2><table class='table-comparison'><tr><th>Kriteria</th><th>Railing Kaca</th><th>Railing Besi</th></tr><tr><td>Harga</td><td>Rp 1,5-3 juta/m</td><td>Rp 800 ribu-1,5 juta/m</td></tr><tr><td>Perawatan</td><td>Hanya perlu lap</td><td>Perlu cat ulang</td></tr></table><h3>Kapan Memilih Railing Kaca?</h3><p>Jika Anda ingin <strong>view tidak terhalang</strong> (misal untuk balkon menghadap pemandangan) atau mengutamakan <strong>modernitas</strong>.</p>",
+        "shortDesc": "Railing kaca menawarkan view tanpa halangan, sementara railing besi lebih ekonomis untuk budget terbatas."
+      }
+    },
+    {
+      "slug": "curtain-wall-aluminium-fungsi-and-keuntungan-untuk-gedung-komersial",
+      "post": {
+        "title": "Curtain Wall Aluminium: Fungsi & Keuntungan untuk Gedung Komersial",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/acp/10.jpeg",
+        "tags": ["#curtain_wall", "#fasad_gedung"],
+        "body": "<h2>Apa Itu Curtain Wall?</h2><p class='mb-4'>Curtain wall adalah dinding eksterior non-struktural dari aluminium dan kaca yang menutupi gedung. Berbeda dengan fasad konvensional, sistem ini ringan namun kokoh.</p><h3>Keuntungan Utama</h3><ul><li><strong>Hemat Energi</strong>: Kaca low-e mengurangi panas matahari.</li><li><strong>Instalasi Cepat</strong>: Dibuat modular sehingga minim gangguan konstruksi.</li><li><strong>Custom Desain</strong>: Bisa kombinasi dengan panel ACP atau logam lainnya.</li></ul><p>Proyek kami di <a href='/proyek/curtain-wall-plaza' title='Curtain Wall Plaza Kuningan'>Plaza Kuningan</a> menggunakan aluminium grade 6063.</p>",
+        "shortDesc": "Curtain wall aluminium menawarkan efisiensi energi dan estetika tinggi untuk gedung perkantoran."
+      }
+    },
+    {
+      "slug": "cubicle-toilet-kaca-solusi-privasi-dengan-sentuhan-mewah",
+      "post": {
+        "title": "Cubicle Toilet Kaca: Solusi Privasi dengan Sentuhan Mewah",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/cubical-toilet/9.jpeg",
+        "tags": ["#cubicle_toilet", "#partisi_kaca"],
+        "body": "<h2>Material Cubicle Toilet Kaca</h2><p class='mb-4'>Partisi toilet dari kaca tempered atau frosted (buram) memberikan kesan higienis dan modern, cocok untuk gedung perkantoran atau restoran mewah.</p><h3>Keunggulan</h3><ul><li><strong>Anti Bakteri</strong>: Permukaan kaca non-porous mencegah tumbuhnya jamur.</li><li><strong>Custom Desain</strong>: Bisa dipadukan dengan strip aluminium atau motif grafir.</li><li><strong>Ketebalan Ideal</strong>: Gunakan kaca 10-12 mm untuk keseimbangan kekuatan dan estetika.</li></ul><p>Lihat contoh proyek kami di <a href='/proyek/cubicle-hotel' title='Cubicle Toilet Hotel'>Hotel X</a>.</p>",
+        "shortDesc": "Partisi toilet kaca tempered menawarkan privasi dengan desain modular yang mudah dibersihkan dan bebas jamur."
+      }
+    },
+    {
+      "slug": "kaca-tempered-untuk-kamar-mandi-aman-dan-stylish",
+      "post": {
+        "title": "Kaca Tempered untuk Kamar Mandi: Aman dan Stylish!",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/kamar-mandi/4.jpeg",
+        "tags": ["#kaca_tempered", "#kamar_mandi"],
+        "body": "<h2>Keamanan Kaca Tempered</h2><p class='mb-4'>Kaca tempered 4-5 kali lebih kuat dari kaca biasa dan saat pecah menjadi butiran kecil yang tidak tajam, ideal untuk area basah seperti kamar mandi.</p><h3>Aplikasi Populer</h3><ol><li><strong>Partisi Shower</strong>: Tahan terhadap perubahan suhu air panas-dingin.</li><li><strong>Cermin Kamar Mandi</strong>: Dilapisi coating anti-kabut.</li><li><strong>Wastafel Kaca</strong>: Desain transparan yang unik.</li></ol><p>Tips perawatan: Bersihkan dengan cairan vinegar dan microfiber cloth untuk hindari goresan.</p>",
+        "shortDesc": "Kaca tempered kamar mandi menawarkan keamanan ekstra dengan desain yang tahan pecah dan mudah dibersihkan."
+      }
+    },
+    {
+      "slug": "inovasi-desain-kanopi-aluminium-untuk-tahan-cuaca-ekstrem",
+      "post": {
+        "title": "Inovasi Desain Kanopi Aluminium untuk Tahan Cuaca Ekstrem",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/kanopi/4.jpeg",
+        "tags": ["#kanopi_aluminium", "#atap_properti"],
+        "body": "<h2>Material Kanopi Aluminium</h2><p class='mb-4'>Aluminium alloy 6063 menjadi pilihan utama karena ketahanannya terhadap karat dan bobotnya yang ringan (50% lebih ringan dari baja).</p><h3>Variasi Desain</h3><ul><li><strong>Kanopi Kaca + Aluminium</strong>: Elegan dengan pencahayaan alami.</li><li><strong>Kanopi Polycarbonate</strong>: Tahan benturan dan lebih ekonomis.</li><li><strong>Model Lengkung</strong>: Cocok untuk carport atau entrance hotel.</li></ul><p>Butuh desain custom? <a href='/kontak' title='Konsultasi Kanopi'>Hubungi tim kami</a> untuk free site survey.</p>",
+        "shortDesc": "Kanopi aluminium menawarkan kekuatan dan fleksibilitas desain untuk berbagai kebutuhan properti."
+      }
+    },
+    {
+      "slug": "kaca-film-gedung-solusi-privasi-and-efisiensi-energi",
+      "post": {
+        "title": "Kaca Film Gedung: Solusi Privasi & Efisiensi Energi",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/acp/11.jpeg",
+        "tags": ["#kaca_film", "#gedung_komersial"],
+        "body": "<h2>Fungsi Kaca Film</h2><p class='mb-4'>Kaca film tidak hanya meningkatkan privasi, tapi juga memblokir 99% sinar UV dan mengurangi beban AC hingga 30%.</p><h3>Jenis-Jenis Film</h3><table class='table-comparison'><tr><th>Tipe</th><th>Ketebalan</th><th>Fitur</th></tr><tr><td>Reflective</td><td>2-8 mil</td><td>Memblokir silau & panas</td></tr><tr><td>Decorative</td><td>1-4 mil</td><td>Motif grafir untuk estetika</td></tr></table><p>Contoh proyek: Pemasangan film reflective di <a href='/proyek/kaca-film-kantor' title='Kaca Film Kantor'>Kantor Y</a> turunkan suhu ruangan 5°C.</p>",
+        "shortDesc": "Kaca film gedung mengurangi panas matahari sekaligus meningkatkan efisiensi energi dan keamanan."
+      }
+    },
+    {
+      "slug": "pintu-kaca-frameless-transformasi-ruang-dengan-desain-tanpa-bingkai",
+      "post": {
+        "title": "Pintu Kaca Frameless: Transformasi Ruang dengan Desain Tanpa Bingkai",
+        "by": "Admin",
+        "date": "17 Jul, 2025",
+        "image": "/images/category/pintu-frameless/4.jpeg",
+        "tags": ["#pintu_kaca", "#desain_minimalis"],
+        "body": "<h2>Desain Pintu Frameless</h2><p class='mb-4'>Pintu kaca tanpa bingkai menggunakan sistem engsel tersembunyi (spigot hinge) yang membuatnya seolah 'mengambang', cocok untuk konsep open space.</p><h3>Ide Aplikasi</h3><ul><li><strong>Ruang Meeting</strong>: Tambahkan film frosted untuk privasi.</li><li><strong>Toko Retail</strong>: Maksimalkan visibility produk.</li><li><strong>Partisi Kamar</strong>: Gunakan kaca laminated untuk reduksi suara.</li></ul><p>Harga pintu frameless mulai dari Rp 2,5 juta/m² tergantung ketebalan dan aksesoris.</p>",
+        "shortDesc": "Pintu kaca frameless menciptakan kesan luas dan modern dengan sistem engsel invisible."
+      }
+    },
+    {
+      "slug": "mengapa-memilih-jasa-pemasangan-kaca-tempered-profesional",
+      "post": {
+        "title": "Mengapa Memilih Jasa Pemasangan Kaca Tempered Profesional?",
+        "by": "Admin",
+        "date": "22 Jul, 2025",
+        "image": "/images/category/cubical-toilet/5.jpeg",
+        "tags": ["#kaca_tempered", "#instalasi_kaca"],
+        "body": "<p class='mb-4 font-comfortaa'>Kaca tempered memiliki kekuatan lima kali lipat dibandingkan kaca biasa. Namun, proses pemasangannya harus dilakukan dengan teknik dan alat khusus. Jasa profesional menjamin hasil yang presisi, aman, dan sesuai standar bangunan modern. Keamanan, efisiensi waktu, dan kualitas adalah alasan utama mengapa Anda perlu menggunakan layanan pemasangan kaca tempered profesional.</p>",
+        "shortDesc": "Kaca tempered perlu dipasang oleh tenaga profesional agar hasilnya aman, rapi, dan sesuai standar bangunan."
+      }
+    },
+    {
+      "slug": "tips-memilih-kontraktor-kaca-berpengalaman-di-jabodetabek",
+      "post": {
+        "title": "Tips Memilih Kontraktor Kaca Berpengalaman di Jabodetabek",
+        "by": "Admin",
+        "date": "25 Jul, 2025",
+        "image": "/images/category/acp/1.jpeg",
+        "tags": ["#kontraktor_kaca", "#jabodetabek"],
+        "body": "<p class='mb-4 font-comfortaa'>Menemukan kontraktor kaca yang tepat sangat penting untuk memastikan proyek Anda berjalan lancar. Pilihlah penyedia layanan yang memiliki portofolio, testimoni positif, dan tim teknis berpengalaman. Di Jabodetabek, banyak kontraktor tersedia, namun hanya sedikit yang benar-benar memahami kebutuhan setiap bangunan. Pastikan juga mereka menyediakan layanan survei dan konsultasi gratis sebelum proyek dimulai.</p>",
+        "shortDesc": "Pilih kontraktor kaca berpengalaman dengan portofolio yang jelas, testimoni baik, dan layanan konsultasi yang transparan."
+      }
+    },
+    {
+      "slug": "kelebihan-menggunakan-partisi-kaca-untuk-ruang-kantor-modern",
+      "post": {
+        "title": "Kelebihan Menggunakan Partisi Kaca untuk Ruang Kantor Modern",
+        "by": "Admin",
+        "date": "10 Jul, 2025",
+        "image": "/images/category/pintu-frameless/4.jpeg",
+        "tags": ["#partisi_kaca", "#kantor"],
+        "body": "<p class='mb-4 font-comfortaa'>Partisi kaca merupakan solusi modern yang memberikan kesan luas dan transparansi pada ruang kerja. Selain meningkatkan estetika, penggunaan partisi kaca juga mendukung pencahayaan alami dan menciptakan suasana kerja yang lebih terbuka serta kolaboratif. Hal ini sangat cocok diterapkan di kantor-kantor urban yang mengutamakan desain minimalis dan efisiensi ruang.</p>",
+        "shortDesc": "Partisi kaca cocok untuk kantor modern karena memperluas ruang, memaksimalkan cahaya alami, dan meningkatkan produktivitas."
+      }
+    },
+    {
+      "slug": "shower-box-kaca-frameless-solusi-elegan-untuk-kamar-mandi",
+      "post": {
+        "title": "Shower Box Kaca Frameless: Solusi Elegan untuk Kamar Mandi",
+        "by": "Admin",
+        "date": "12 Jul, 2025",
+        "image": "/images/category/kamar-mandi/2.jpeg",
+        "tags": ["#shower_box", "#frameless", "#kaca_mandi"],
+        "body": "<p class='mb-4 font-comfortaa'>Shower box kaca tanpa bingkai atau frameless kini menjadi pilihan favorit banyak pemilik rumah modern. Desainnya yang minimalis dan bersih menciptakan tampilan kamar mandi yang lebih luas dan mewah. Selain itu, material kaca tempered yang digunakan menjamin keamanan dan daya tahan tinggi terhadap kelembaban. Solusi ini sangat cocok untuk kamar mandi bergaya kontemporer.</p>",
+        "shortDesc": "Shower box kaca frameless menawarkan tampilan mewah, minimalis, dan fungsional untuk kamar mandi modern."
+      }
+    }
+    ]
+
+    return paginate(articles, {
+        pageSize: 8,
+    });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+---
+
+<Layout 
+  title="Artikel | CANOVIO Glasswork" page="blog"
+  description="Baca artikel terbaru tentang kaca, aluminium, dan inovasi desain interior dari Canovio Glasswork."
+  og_title="Artikel | CANOVIO Glasswork"
+  og_description="Baca artikel terbaru tentang kaca, aluminium, dan inovasi desain interior dari Canovio Glasswork."
+  og_image="/images/bg-2.jpg"
+  og_url="https://canovio.com/articles/page/1"
+  og_type="article"
+  >
+    <section class="w-screen h-auto px-4 pt-24 pb-12 lg:py-24 bg-[#ebeceb]">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-nunito font-bold mb-2">Artikel Terkait</h2>
+            <p class="text-sm font-comfortaa text-gray-600 mb-4">Berikut beberapa artikel terkait dengan layanan yang kami sediakan</p>
+            <div class="grid lg:grid-cols-4 grid-cols-2 gap-6 gap-y-8">
+                {page.data.map((article) => (
+                    <ArticleCard article={article.post} slug={article.slug} />
+                ))}
+            </div>
+        </div>
+        <ul class="flex justify-center items-center mt-12 space-x-2 font-comfortaa">
+          <li>
+            {page.currentPage > 1 ? (
+                <a href={`/articles/page/${page.currentPage - 1}`} class="px-3 h-10 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-md text-sm flex items-center gap-2">
+                  <span class="material-symbols-rounded">
+                    chevron_backward
+                  </span>
+                  <span>
+                    Previous
+                  </span>  
+                </a>
+              ) : (
+                <a class="px-3 h-10 bg-gray-200 text-gray-700 rounded-md text-sm opacity-50 cursor-not-allowed flex items-center gap-2">
+                  <span class="material-symbols-rounded">
+                    chevron_backward
+                  </span>
+                  <span>
+                    Previous
+                  </span> 
+                </a>
+              )}
+          </li>
+          { page.lastPage > 1 && (
+            Array.from({ length: page.lastPage }, (_, i) => (
+              <li>
+                <a href={`/articles/page/${i + 1}`} class={`w-10 h-10 flex justify-center items-center ${i + 1 === page.currentPage ? 'bg-[#0c1b33] text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} rounded-md`}>
+                  <span class="text-sm">
+                    {i + 1}
+                  </span>
+                </a>
+              </li>
+            ))
+          )}
+            <li>
+              {page.currentPage < page.lastPage ? (
+                <a href={`/articles/page/${page.currentPage + 1}`} class="px-3 h-10 flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-md text-sm">
+                  Next
+                  <span class="material-symbols-rounded">
+                    chevron_forward
+                  </span>
+                </a>
+              ) : (
+                <a class="px-3 h-10 flex items-center gap-2 bg-gray-200 text-gray-700 rounded-md text-sm opacity-50 cursor-not-allowed">
+                  Next
+                  <span class="material-symbols-rounded">
+                    chevron_forward
+                  </span>
+                </a>
+              )}
+            </li>
+        </ul>
+    </section>
+</Layout>

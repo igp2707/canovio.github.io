@@ -33,20 +33,16 @@ const works = [
         url: 'aluminium' 
     },
     { 
-        src: '/images/category/dinding/1.jpeg',
-        url: 'dinding' 
-    },
-    { 
         src: '/images/category/kamar-mandi/1.jpeg',
         url: 'kaca' 
     },
     { 
-        src: '/images/category/kanopi/1.jpeg',
-        url: 'kanopi' 
+        src: '/images/category/cubical-toilet/1.jpeg',
+        url: 'toilet' 
     },
     { 
-        src: '/images/category/lantai/1.jpeg',
-        url: 'lantai' 
+        src: '/images/category/kanopi/1.jpeg',
+        url: 'kanopi' 
     },
     { 
         src: '/images/category/pintu-frameless/2.jpeg',
@@ -56,39 +52,12 @@ const works = [
         src: '/images/category/railing/2.jpeg',
         url: 'railing' 
     },
-    { 
-        src: '/images/category/top-table/1.jpeg',
-        url: 'table' 
-    },
 ]
 ---
 
-<section id="work" class="w-screen h-auto bg-amber-50 py-12 lg:py-24 px-4">
+<section id="work" class="w-screen h-auto bg-[#ebeceb] py-12 lg:py-24 px-4">
     <div class="container mx-auto">
         <div class="flex gap-4 flex-col-reverse lg:flex-row">
-            <!-- <div class="grid grid-cols-3 w-2/3 gap-4">
-                <div class="overflow-hidden">
-                    <a href="#!" class="flex justify-center w-full h-96 rounded-tl-4xl rounded-br-4xl shadow-lg bg-[url('/images/sample-1.jpg')] bg-cover bg-center relative group" data-aos="fade-up">
-                        <div class="absolute top-4 right-4 w-12 h-12 bg-amber-50 rounded-2xl rounded-tr-none">
-                            <img src={arrow.src} alt="panah-1" class="transition-transform duration-500 group-hover:rotate-360" />
-                        </div>
-                    </a>
-                </div>
-                <div class="overflow-hidden">
-                    <a href="#!" class="flex justify-center w-full h-96 rounded-tl-4xl rounded-br-4xl shadow-lg bg-[url('/images/sample-2.jpg')] bg-cover bg-center relative group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="absolute top-4 right-4 w-12 h-12 bg-amber-50 rounded-2xl rounded-tr-none">
-                            <img src={arrow.src} alt="panah-1" class="transition-transform duration-500 group-hover:rotate-360" />
-                        </div>
-                    </a>
-                </div>
-                <div class="overflow-hidden">
-                    <a href="#!" class="flex justify-center w-full h-96 rounded-tl-4xl rounded-br-4xl shadow-lg bg-[url('/images/sample-3.jpg')] bg-cover bg-center relative group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="absolute top-4 right-4 w-12 h-12 bg-amber-50 rounded-2xl rounded-tr-none">
-                            <img src={arrow.src} alt="panah-1" class="transition-transform duration-500 group-hover:rotate-360" />
-                        </div>
-                    </a>
-                </div>
-            </div> -->
             <div class="w-full lg:w-2/3 overflow-hidden">
                 <Splide
                     class='not-content'
@@ -104,7 +73,7 @@ const works = [
                                 <SplideSlide>
                                     <a href={Astro.site + "category/" + work.url} class="flex justify-center items-center w-full h-96 rounded-tl-4xl rounded-br-4xl shadow-lg relative group overflow-hidden">
                                         <img src={work.src} alt="work" class="w-full h-auto lg:h-full lg:w-auto" />
-                                        <div class="absolute top-4 right-4 w-12 h-12 bg-amber-50 rounded-2xl rounded-tr-none">
+                                        <div class="absolute top-4 right-4 w-12 h-12 bg-[#ebeceb] rounded-2xl rounded-tr-none">
                                             <img src={arrow.src} alt="panah-1" class="transition-transform duration-500 group-hover:rotate-360" />
                                         </div>
                                     </a>
@@ -126,7 +95,7 @@ const works = [
                     </p>
                 </div>
                 <div class="overflow-hidden mt-4 mb-4 lg:mt-8 lg:mb-0 hidden lg:block">
-                    <a href={Astro.site + "category/aluminium"} class="inline-block bg-[#b79c6d] text-white border-2 border-transparent px-6 py-3 rounded-tl-2xl rounded-br-2xl hover:bg-[#a88a5c] transition-colors font-comfortaa text-sm" data-aos="fade-up" data-aos-delay="200">
+                    <a href={Astro.site + "category/aluminium"} class="inline-block bg-[#0c1b33] text-[#ebeceb] border-2 border-transparent px-6 py-3 rounded-tl-2xl rounded-br-2xl hover:bg-[#363f48] transition-colors font-comfortaa text-sm" data-aos="fade-up" data-aos-delay="200">
                         Lihat lainnya
                     </a>
                 </div> 

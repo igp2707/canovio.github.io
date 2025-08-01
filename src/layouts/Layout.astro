@@ -1,10 +1,13 @@
 ---
-const { title, page } = Astro.props;
 import "../styles/global.css";
 import Welcome from '../components/Welcome.astro'
 
 import wa from '../assets/wa-white.png'
 import arrow from '../assets/arrow-72.png'
+import email from '../assets/email-white.png'
+import ig from '../assets/ig-white.png'
+
+const { title, description, page, og_title, og_description, og_image, og_url, og_type } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,17 +16,34 @@ import arrow from '../assets/arrow-72.png'
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+		<title>{title}</title>
+
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Jasa konstruksi terpercaya di Indonesia terutama untuk kawasan Tanggerang Selatan. Bangun rumah, ruko, dan lainnya bersama PT Bangun Jaya." />
+
+		<meta name="description" content={description} />
+
+		<!-- Open Graph Tags -->
+
+		<meta property="og:title" content={og_title} />
+		<meta property="og:description" content={og_description} />
+		<meta property="og:image" content={og_image} />
+		<meta property="og:url" content={og_url} />
+		<meta property="og:type" content={og_type} />
 		
 		<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded&icon_names=home,info,work,article,call" rel="stylesheet" />
 
-		<title>{title}</title>
 	</head>
-	<body class="font-sans text-gray-800 overflow-x-hidden w-screen relative" id="top">
+	<body class="font-sans text-[#0c1b33] overflow-x-hidden w-screen relative" id="top">
 		<header class="bg-transparent text-black py-4 absolute top-0 left-0 w-screen z-50">
 			<div class="container mx-auto flex justify-between items-center px-4">
-				<h1 class="text-xl font-bold font-nunito text-[#342015]">CANOVIO</h1>
+				<a href="/" class="flex flex-row items-center">
+					<img id="header-logo" src="/images/icon-light.png" alt="logo" class="w-12 h-12 mr-2" />
+					<div class="inline-block text-left">
+						<h1 class="text-xl font-bold font-nunito text-[#0c1b33]">CANOVIO</h1>
+						<h1 class="text-sm font-semibold tracking-widest text-[#0c1b33]">GLASSWORK</h1>
+					</div>
+				</a>
 				<nav class="space-x-4 hidden lg:flex">
 					<a 
 					href="/" 
@@ -72,7 +92,7 @@ import arrow from '../assets/arrow-72.png'
 					class="overflow-hidden 
 						relative 
 						inline-block
-						before:content-['Pekerjaan_Kami'] 
+						before:content-['Layanan'] 
 						before:block
 						before:w-full 
 						before:h-auto 
@@ -86,11 +106,11 @@ import arrow from '../assets/arrow-72.png'
 						group"
 					> 
 					<div class="transition duration-500 group-hover:-translate-y-full font-comfortaa">
-						<span class={page === 'category' ? 'font-black' : ''}>Pekerjaan Kami</span>
+						<span class={page === 'category' ? 'font-black' : ''}>Layanan</span>
 					</div>
 					</a>
 					<a 
-					href={'/articles'}
+					href={'/articles/page/1'}
 					class="overflow-hidden 
 						relative 
 						inline-block
@@ -114,13 +134,13 @@ import arrow from '../assets/arrow-72.png'
 					</div>
 					</a>
 				</nav>
-				<a href={"/contact"} class="inline-block bg-[#342015] text-white border-2 border-transparent px-6 py-2.5 rounded-2xl hover:bg-[#745748] transition-colors font-comfortaa text-sm">Kontak Kami</a>
+				<a id="contact-link" href={"/contact"} class="inline-block bg-[#0c1b33] text-[#ebeceb] border-2 border-transparent px-6 py-2.5 rounded-2xl hover:bg-[#363f48] transition-colors font-comfortaa text-sm">Kontak Kami</a>
 			</div>
 		</header>
 
-		<div id="bottomMenu" class="lg:hidden fixed bottom-0 left-0 bg-amber-50 flex flex-row justify-around items-center w-screen h-18 z-10">
+		<div id="bottomMenu" class="lg:hidden fixed bottom-0 left-0 bg-[#ebeceb] flex flex-row justify-around items-center w-screen h-18 z-10">
 			<a href="/" class="w-fit text-center">
-				<div class={page === 'home' ? 'bg-[#745748] text-white px-4 rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+				<div class={page === 'home' ? 'bg-[#363f48] text-[#ebeceb] px-4 rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
 					<span class="material-symbols-rounded">
 						home
 					</span>
@@ -128,7 +148,7 @@ import arrow from '../assets/arrow-72.png'
 				<span class={page === 'home' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Beranda</span>
 			</a>
 			<a href={"/about"} class="w-fit text-center">
-				<div class={page === 'about' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+				<div class={page === 'about' ? 'bg-[#363f48] text-[#ebeceb] rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
 					<span class="material-symbols-rounded">
 						info
 					</span>
@@ -136,15 +156,15 @@ import arrow from '../assets/arrow-72.png'
 				<span class={page === 'about' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Tentang Kami</span>
 			</a>
 			<a href={"/category/aluminium"} class="w-fit text-center">
-				<div class={page === 'category' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+				<div class={page === 'category' ? 'bg-[#363f48] text-[#ebeceb] rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
 					<span class="material-symbols-rounded">
 						work
 					</span>
 				</div>
-				<span class={page === 'category' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Pekerjaan Kami</span>
+				<span class={page === 'category' ? "text-xs font-bold font-nunito" : "text-xs font-nunito"}>Layanan</span>
 			</a>
-			<a href={"/articles"} class="w-fit text-center">
-				<div class={page === 'blog' ? 'bg-[#745748] text-white rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
+			<a href={"/articles/page/1"} class="w-fit text-center">
+				<div class={page === 'blog' ? 'bg-[#363f48] text-[#ebeceb] rounded-full mx-auto flex w-16 h-8 items-center justify-center' : ''}>
 					<span class="material-symbols-rounded">
 						article
 					</span>
@@ -153,7 +173,7 @@ import arrow from '../assets/arrow-72.png'
 			</a>
 		</div>
 
-		<!-- <Welcome /> -->
+		<Welcome />
 
 		<main>
 			<slot />
@@ -165,60 +185,65 @@ import arrow from '../assets/arrow-72.png'
 					<img src={arrow.src} alt="arrow" class="w-6 h-6 -rotate-45" />
 				</a>
 			</div>
-			<a href="#!" class="flex flex-row justify-center items-center w-12 h-12 bg-green-500 rounded-2xl hover:bg-green-400 transition-all">
+			<a href="https://wa.me/62895328972160/?text=Halo%20CANOVIO%20Glasswork,%0A%0ASaya%20tertarik%20dengan%20layanan%20yang%20anda%20sediakan.%20Apa%20kita%20bisa%20bahas%20lebih%20lanjut?" class="flex flex-row justify-center items-center w-12 h-12 bg-green-500 rounded-2xl hover:bg-green-400 transition-all">
 				<img src={wa.src} alt="wa" class="w-6 h-6" />
 			</a>
 		</div>
 
-		<footer class="bg-[#342015] text-white text-center py-12 w-screen pb-32 lg:pb-0">
+		<footer class="bg-[#0c1b33] text-[#ebeceb] text-center py-12 w-screen pb-32 lg:pb-12">
 			<div class="container mx-auto px-4 lg:px-0">
 				<div class="flex lg:flex-row flex-col">
 					<div class="lg:w-1/4 w-full pr-12 mb-4 lg:mb-0">
 						<a href="/" class="flex items-center">
-							<img src="/images/icon-light.png" alt="logo" class="w-16 h-16 mr-2" />
+							<img src="/images/icon.png" alt="logo" class="w-16 h-16 mr-2" />
 							<div class="inline-block text-left">
 								<h1 class="text-2xl font-bold font-nunito">CANOVIO</h1>
-								<h1 class="text-base font-semibold tracking-widest">Glasstone</h1>
+								<h1 class="text-base font-semibold tracking-widest">GLASSWORK</h1>
 							</div>
 						</a>
-						<p class="text-sm mt-2 font-comfortaa text-justify">Canovio Glasstone merupakan jasa konstruksi terpercaya dengan memberikan kualitas terbaik dengan harga terjangkau.</p>
+						<p class="text-sm mt-2 font-comfortaa text-justify">Canovio Glasswork merupakan jasa instalasi kaca terpercaya dengan memberikan kualitas terbaik dengan harga terjangkau.</p>
 					</div>
 					<div class="lg:w-3/4 w-full">
-						<div class="flex lg:flex-row flex-col lg:justify-between gap-4">
+						<div class="flex lg:flex-row flex-col lg:justify-around gap-4">
 							<div class="text-left">
 								<h2 class="text-xl font-comfortaa font-bold mb-4">Perusahaan</h2>
 								<ul class="text-sm font-comfortaa space-y-2">
 									<li><a href={"/about"}>Tentang Kami</a></li>
-									<li><a href={"/category/aluminium"}>Pekerjaan Kami</a></li>
+									<li><a href={"/category/aluminium"}>Layanan</a></li>
 									<li><a href={"/article"}>Artikel</a></li>
 								</ul>
 							</div>
 							<div class="text-left">
-								<h2 class="text-xl font-comfortaa font-bold mb-4">Kategori Glass</h2>
-								<ul class="text-sm font-comfortaa space-y-2">
-									<li><a href="/category/aluminium">Instalasi Aluminium</a></li>
-									<li><a href="/category/kanopi">Instalasi Kanopi</a></li>
-									<li><a href="/category/railing">Instalasi Kaca Railing</a></li>
-									<li><a href="/category/cermin">Instalasi Cermin</a></li>
-									<li><a href="/category/kaca">Instalasi Kaca Kamar Mandi</a></li>
-									<li><a href="/category/pintu">Instalasi Pintu Frameless</a></li>
-									<li><a href="/category/acp">Instalasi Curtain Wall & ACP</a></li>
-								</ul>
-							</div>
-							<div class="text-left">
-								<h2 class="text-xl font-comfortaa font-bold mb-4">Kategori Stone</h2>
-								<ul class="text-sm font-comfortaa space-y-2">
-									<li><a href="/category/table">Instalasi Top Table</a></li>
-									<li><a href="/category/dinding">Instalasi Dinding</a></li>
-									<li><a href="/category/lantai">Instalasi Lantai</a></li>
-								</ul>
+								<h2 class="text-xl font-comfortaa font-bold mb-4">Layanan</h2>
+								<div class="flex lg:flex-row flex-col lg:gap-8 gap-2">
+									<ul class="text-sm font-comfortaa space-y-2">
+										<li><a href="/category/aluminium">Instalasi Aluminium</a></li>
+										<li><a href="/category/kanopi">Instalasi Kanopi</a></li>
+										<li><a href="/category/railing">Instalasi Kaca Railing</a></li>
+										<li><a href="/category/cermin">Instalasi Cermin</a></li>
+									</ul>
+									<ul class="text-sm font-comfortaa space-y-2">
+										<li><a href="/category/toilet">Instalasi Cubical Toilet</a></li>
+										<li><a href="/category/kaca">Instalasi Kaca Kamar Mandi</a></li>
+										<li><a href="/category/pintu">Instalasi Pintu Frameless</a></li>
+										<li><a href="/category/acp">Instalasi Curtain Wall & ACP</a></li>
+									</ul>
+								</div>
 							</div>
 							<div class="text-left">
 								<h2 class="text-lg font-bold font-comfortaa mb-4">Kontak Kami</h2>
 								<ul class="text-sm font-comfortaa space-y-2">
-									<li>Email: <a href="mailto:example@mail.com">contoh@email.com</a>
-									<li>Telepon: <a href="tel:+62123456789">+62 123 456 789</a></li>
-									<li>Alamat: Jl. Contoh No. 123, Kota, Provinsi</li>
+									<li>
+										<img src={email.src} alt="email-icon" class="w-8 h-8 inline-block mr-2">
+										<a href="mailto:canovioglasswork@gmail.com">canovioglasswork@gmail.com</a>
+									<li>
+										<img src={wa.src} alt="wa-icon" class="w-8 h-8 inline-block mr-2">
+										<a href="https://wa.me/62895328972160/?text=Halo%20CANOVIO%20Glasswork,%0A%0ASaya%20tertarik%20dengan%20layanan%20yang%20anda%20sediakan.%20Apa%20kita%20bisa%20bahas%20lebih%20lanjut?">(+62) 895 3289 72160</a>
+									</li>
+									<li>
+										<img src={ig.src} alt="ig-icon" class="w-8 h-8 inline-block mr-2">
+										<a href="https://www.instagram.com/canovioglasswork">@canovioglasswork</a>
+									</li>
 								</ul>
 						</div>
 					</div>
@@ -234,17 +259,59 @@ import arrow from '../assets/arrow-72.png'
 			'once': true,
 		});
 
+		window.addEventListener('load', () => {
+			const splash = document.getElementById('splash');
+			const logo = document.getElementById('logo-splash');
+			const text1 = document.getElementById('text1-splash');
+			const text2 = document.getElementById('text2-splash');
+
+			const heroX = document.querySelectorAll('.hero-content-x');
+			const heroY = document.querySelectorAll('.hero-content-y');
+
+			if (splash && logo && text1 && text2 && heroX && heroY) {
+				splash.classList.add('translate-y-full', 'opacity-0');
+				logo.classList.remove('translate-y-24');
+				text1.classList.remove('translate-y-10');
+				text2.classList.remove('translate-y-5');
+				setTimeout(() => {
+					splash.style.display = 'none';
+					for (let i = 0; i < heroX.length; i++) {
+						heroX[i].classList.remove('translate-x-[calc(100%+100px)]');
+					}
+					for (let i = 0; i < heroY.length; i++) {
+						heroY[i].classList.remove('translate-y-full');
+					}
+				}, 3000);
+			}
+
+		});
+		
 		window.addEventListener('scroll', () => {
 			const header = document.querySelector('header');
+			const title = document.querySelectorAll('header h1');
+			const logo = document.getElementById('header-logo') as HTMLImageElement;
+			const contactLink = document.querySelector('#contact-link');
 			const top = document.querySelector('#go-top');
-			if (!header) return;
+			if (!header || !logo) return;
 			if (window.scrollY > 50) {
-				header.classList.add('bg-white', 'shadow-md', 'fixed', 'top-0', 'left-0');
-				header.classList.remove('absolute');
+				header.classList.add('bg-[#0c1b33]', 'text-[#ebeceb]', 'shadow-md', 'fixed', 'top-0', 'left-0');
+				header.classList.remove('absolute', 'bg-transparent', 'text-black');
+				title.forEach(e => {
+					e?.classList.add('text-[#ebeceb]');
+				});
+				logo.src = '/images/icon.png';
+				contactLink?.classList.add('bg-[#ebeceb]', 'text-[#0c1b33]', 'hover:bg-white');
+				contactLink?.classList.remove('bg-[#0c1b33]', 'text-[#ebeceb]', 'hover:bg-[#363f48]');
 				top?.classList.remove('translate-y-full');
 			} else {
-				header.classList.remove('bg-white', 'shadow-md', 'fixed', 'top-0', 'left-0');
-				header.classList.add('absolute');
+				header.classList.remove('bg-[#0c1b33]', 'text-[#ebeceb]', 'shadow-md', 'fixed', 'top-0', 'left-0');
+				title.forEach(e => {
+					e?.classList.remove('text-[#ebeceb]');
+				});
+				logo.src = '/images/icon-light.png';
+				contactLink?.classList.remove('bg-[#ebeceb]', 'text-[#0c1b33]', 'hover:bg-white');
+				contactLink?.classList.add('bg-[#0c1b33]', 'text-[#ebeceb]', 'hover:bg-[#363f48]');
+				header.classList.add('absolute', 'bg-transparent', 'text-black');
 				top?.classList.add('translate-y-full');
 			}
 		});

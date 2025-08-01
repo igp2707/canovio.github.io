@@ -9,12 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.1",
     "@tailwindcss/vite": "^4.1.11",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "aos": "^2.3.4",
     "astro": "^5.11.0",
     "astro-lightgallery": "^2.0.0",
     "astro-splide": "^2.0.0",
     "firebase-tools": "^14.11.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-leaflet": "^5.0.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

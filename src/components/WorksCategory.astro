@@ -5,7 +5,7 @@ const { work } = Astro.props
 
 ---
 
-<section class="w-full h-auto lg:px-4 px-0 bg-amber-50">
+<section class="w-full h-auto lg:px-4 px-0 bg-[#ebeceb]">
     <div class="container mx-auto">
         <h2 class="text-4xl font-nunito font-black">
             { work.title }
@@ -19,9 +19,9 @@ const { work } = Astro.props
                 Galeri Pekerjaan
             </h3>
             <p class="text-sm italic text-gray-600 font-comfortaa mt-2 text-justify">
-                Klik gambar untuk melihat lebih jelas.
+                Klik untuk melihat gambar dengan lebih jelas.
             </p>
-            <div class="w-full h-auto mt-4">
+            <div class="w-full h-auto mt-4 overflow-hidden">
                 <LightGallery
                     layout={{
                         imgs: work.images
@@ -29,6 +29,7 @@ const { work } = Astro.props
                     options={{
                         thumbnail: true
                     }}
+                    data-aos="fade-up"
                 />
             </div>
             </>

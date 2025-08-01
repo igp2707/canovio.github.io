@@ -20,12 +20,14 @@ const options = {
         },
     },
 }
+
+const { clients } = Astro.props
 ---
 
-<section id="client" class="w-screen h-auto bg-[#342015] py-12 lg:py-24 px-4">
+<section id="client" class="w-screen h-auto bg-[#0c1b33] py-12 lg:py-24 px-4">
     <div class="container mx-auto">
         <div class="overflow-hidden w-full pb-2 text-center">
-            <h1 class="text-4xl font-nunito text-amber-50" data-aos="fade-up">
+            <h1 class="text-4xl font-nunito text-[#ebeceb]" data-aos="fade-up">
                 Bagaimana Pendapat Client Kami?
             </h1>
         </div>
@@ -40,45 +42,24 @@ const options = {
                 >
                 <div class="relative w-full h-auto mt-8">
                     <SplideTrack>
-                        <SplideSlide>
-                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
-                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
-                                    "CANOVIO Glasstone telah memberikan layanan konstruksi yang sangat profesional. Proyek kami selesai tepat waktu dan dengan kualitas yang sangat baik."
-                                </p>
-                                <div class="flex flex-row items-center">
-                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
-                                        <img src="/images/client/client-1.jpg" alt="Client 1" class="w-full h-full object-cover absolute top-0 left-0" />
+                        {clients.map((client: { name: string; testimonial: String; image: string | null | undefined; city: string; }) => (
+                            <SplideSlide>
+                                <div class="w-full h-auto bg-[#ebeceb] rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
+                                    <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
+                                        "{client.testimonial}"
+                                    </p>
+                                    <div class="flex flex-row items-center">
+                                        <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
+                                            <img src={client.image} alt={client.name} class="w-full h-full object-cover absolute top-0 left-0" />
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <p class="text-gray-600 font-comfortaa text-sm">- {client.name}, </p>
+                                            <p class="text-gray-600 font-comfortaa text-xs ml-2">{client.city}</p>
+                                        </div>
                                     </div>
-                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 1</p>
                                 </div>
-                            </div>
-                        </SplideSlide>
-                        <SplideSlide>
-                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
-                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
-                                    "Kami sangat puas dengan hasil kerja CANOVIO Glasstone. Tim mereka sangat profesional dan selalu siap membantu."
-                                </p>
-                                <div class="flex flex-row items-center">
-                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
-                                        <img src="/images/client/client-2.jpg" alt="Client 2" class="w-full h-full object-cover absolute top-0 left-0" />
-                                    </div>
-                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 2</p>
-                                </div>
-                            </div>
-                        </SplideSlide>
-                        <SplideSlide>
-                            <div class="w-full h-auto bg-amber-50 rounded-br-4xl rounded-tl-4xl p-6 shadow-lg relative">
-                                <p class="text-gray-800 font-comfortaa text-sm lg:text-base mb-4">
-                                    "Pengalaman bekerja dengan CANOVIO Glasstone sangat menyenangkan. Mereka selalu mengutamakan kepuasan klien dan hasilnya sangat memuaskan."
-                                </p>
-                                <div class="flex flex-row items-center">
-                                    <div class="w-12 h-12 lg:w-16 lg:h-16 overflow-hidden rounded-full relative mr-4">
-                                        <img src="/images/client/client-3.jpg" alt="Client 3" class="w-full h-full object-cover absolute top-0 left-0" />
-                                    </div>
-                                    <p class="text-gray-600 font-comfortaa text-xs lg:text-sm">- Klien 3</p>
-                                </div>
-                            </div>
-                        </SplideSlide>
+                            </SplideSlide>
+                        ))}
                     </SplideTrack>
                 </div>
             </Splide>
