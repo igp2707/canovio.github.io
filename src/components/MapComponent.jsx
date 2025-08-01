@@ -1,5 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import L from 'leaflet'
 
 import { useEffect } from "react";
@@ -12,17 +11,13 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function MapComponent() {
-    useEffect(() => {
-        // Ensure the map is properly initialized after the component mounts
-        document.querySelector('.leaflet-container')?.style.setProperty('height', '400px');
-        document.getElementsByClassName( 'leaflet-control-attribution' )[0].style.display = 'none'  
-    }, []);
+
   return (
+    <>
     <MapContainer
         center={[-6.20064623039216, 106.79870139190605]}
         zoom={13}
-        style={{ width: '100%', zIndex: 0 }}
-        className='lg:h-[400px] h-[500px]'>
+        className='h-[400px] w-full z-0 rounded-4xl'>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -33,5 +28,6 @@ export default function MapComponent() {
           </Popup>
         </Marker>
     </MapContainer>
+    </>
   )
 }
